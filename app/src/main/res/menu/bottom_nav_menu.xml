@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/newsFragment"
+        android:icon="@drawable/ic_news_vector"
+        android:title="Новости"
+        />
+    <item
+        android:id="@+id/competitionsFragment"
+        android:icon="@drawable/ic_competitions_vector"
+        android:title="Соревнования" />
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_profile_vector"
+        android:title="Профиль" />
+</menu>
