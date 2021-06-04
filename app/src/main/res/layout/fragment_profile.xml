@@ -1,17 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/profileFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".profile.AccountFragment"
-    android:orientation="vertical">
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.AccountFragment">
 
-    <TextView
-        android:id="@+id/profile_textview"
+    <ImageView
+        android:id="@+id/profile_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Личный кабинет" />
+        android:scaleType="centerCrop"
+        android:src="@drawable/profile_background_img" />
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/red_logo_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/sport_pro_red_logo" />
+
+    <TextView
+        android:id="@+id/enter_as_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/red_logo_profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="110dp"
+        android:fontFamily="@font/oswald"
+        android:text="Войти как"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textFontWeight="600"
+        android:textSize="32sp" />
+
+    <View
+        android:id="@+id/coach_btn"
+        android:layout_width="138dp"
+        android:layout_height="170dp"
+        android:layout_below="@id/enter_as_tv"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:alpha="0.5"
+        android:background="@drawable/rounded_profile_btn" />
+
+    <ImageView
+        android:id="@+id/ic_coach_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/coach_btn"
+        android:layout_alignTop="@+id/coach_btn"
+        android:layout_alignEnd="@+id/coach_btn"
+        android:layout_alignBottom="@+id/coach_btn"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="29.63dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="62dp"
+        android:src="@drawable/ic_coach" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/coach_btn"
+        android:layout_alignEnd="@+id/coach_btn"
+        android:layout_alignBottom="@+id/coach_btn"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/oswald"
+        android:gravity="center"
+        android:text="Тренер"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textFontWeight="600"
+        android:textSize="22sp" />
+
+    <View
+        android:id="@+id/judge_btn"
+        android:layout_width="138dp"
+        android:layout_height="170dp"
+        android:layout_below="@id/enter_as_tv"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="30dp"
+        android:alpha="0.5"
+        android:background="@drawable/rounded_profile_btn" />
+
+    <ImageView
+        android:id="@+id/ic_judge_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/judge_btn"
+        android:layout_alignTop="@+id/judge_btn"
+        android:layout_alignEnd="@+id/judge_btn"
+        android:layout_alignBottom="@+id/judge_btn"
+        android:layout_marginLeft="28.57dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginRight="28.57dp"
+        android:layout_marginBottom="54dp"
+        android:src="@drawable/ic_judge" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/judge_btn"
+        android:layout_alignEnd="@+id/judge_btn"
+        android:layout_alignBottom="@+id/judge_btn"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/oswald"
+        android:gravity="center"
+        android:text="Судья"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textFontWeight="600"
+        android:textSize="22sp" />
+
+</RelativeLayout>

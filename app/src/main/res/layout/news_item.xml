@@ -11,12 +11,14 @@
         android:id="@+id/news_image"
         android:layout_width="match_parent"
         android:layout_height="160dp"
-        android:scaleType="centerCrop" />
+        android:foreground="@drawable/image_shadow"
+        android:scaleType="centerCrop"
+        android:src="@drawable/news_sample_img" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="160dp"
-        android:background="@drawable/image_shadow" />
+    <!--    <View-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="160dp"-->
+    <!--        android:background="@drawable/image_shadow" />-->
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -28,26 +30,26 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/rounded_typeof_sport_background"
-            android:fontFamily="@font/montserrat"
+            android:fontFamily="@font/oswald"
+            android:textAllCaps="true"
             android:textColor="@color/white"
-            android:textFontWeight="600"
-            android:textSize="12sp"
+            android:textFontWeight="500"
+            android:textSize="13sp"
             android:textStyle="normal" />
 
         <TextView
             android:id="@+id/news_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/news_typeof_sport"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="92dp"
             android:layout_marginBottom="0dp"
-            android:fontFamily="@font/montserrat"
+            android:fontFamily="@font/oswald"
             android:textColor="@color/white"
             android:textFontWeight="700"
-            android:textSize="14sp"
+            android:textSize="18sp"
             android:textStyle="normal" />
 
         <TextView
@@ -57,10 +59,11 @@
             android:layout_below="@id/news_title"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="4dp"
-            android:fontFamily="@font/montserrat"
-            android:textColor="@color/white"
-            android:textFontWeight="600"
-            android:textSize="12sp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/oswald"
+            android:textColor="#B8B8B8"
+            android:textFontWeight="500"
+            android:textSize="14sp"
             android:textStyle="normal" />
 
     </RelativeLayout>
