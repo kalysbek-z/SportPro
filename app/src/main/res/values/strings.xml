@@ -2,4 +2,30 @@
     <string name="app_name">SportProKG</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    
+    <string-array name="regions">
+        <item>Какую область предоставляете?</item>
+        <item>Баткен</item>
+        <item>Джалал-Абад</item>
+        <item>Иссык-Куль</item>
+        <item>Нарын</item>
+        <item>Ош</item>
+        <item>Талас</item>
+        <item>Чуй</item>
+    </string-array>
+
+    <string-array name="categories">
+        <item>Выберите категорию</item>
+        <item>Олимпийская</item>
+        <item>Неолимпийская</item>
+        <item>Национальная</item>
+    </string-array>
+
+    <string-array name="type_of_sport">
+        <item>Выберите вид спорта</item>
+        <item>Бокс</item>
+        <item>Дзюдо</item>
+        <item>Ушу</item>
+    </string-array>
+
 </resources>

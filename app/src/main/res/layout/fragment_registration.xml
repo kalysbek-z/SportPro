@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrationFragment">
+
+    <ImageView
+        android:id="@+id/profile_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/profile_background_img" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/phone_number_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                app:navigationIcon="@drawable/ic_back" />
+
+            <ImageView
+                android:id="@+id/red_logo_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/phone_number_toolbar"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/sport_pro_red_logo" />
+
+            <TextView
+                android:id="@+id/reg_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/red_logo_profile"
+                android:layout_marginTop="64dp"
+                android:layout_marginBottom="19dp"
+                android:fontFamily="@font/oswald"
+                android:text="Регистрация"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textFontWeight="600"
+                android:textSize="32sp" />
+
+            <View
+                android:id="@+id/frame"
+                android:layout_width="328dp"
+                android:layout_height="916dp"
+                android:layout_below="@id/reg_tv"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="38dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="38dp"
+                android:alpha="0.5"
+                android:background="@drawable/rounded_profile_btn" />
+
+            <LinearLayout
+                android:id="@+id/container"
+                android:layout_width="328dp"
+                android:layout_height="916dp"
+                android:layout_alignLeft="@id/frame"
+                android:layout_alignTop="@id/frame"
+                android:layout_alignRight="@id/frame"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="36dp"
+                    android:layout_marginRight="24dp"
+                    android:fontFamily="@font/oswald"
+                    android:letterSpacing="0.07"
+                    android:text="Имя*"
+                    android:textColor="@color/white"
+                    android:textFontWeight="600"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/name_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="24dp"
+                    android:background="@drawable/rounded_edittext"
+                    android:fontFamily="@font/oswald"
+                    android:hint="Как вас зовут?"
+                    android:letterSpacing="0.01"
+                    android:padding="14dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#707070"
+                    android:textFontWeight="400"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="24dp"
+                    android:fontFamily="@font/oswald"
+                    android:letterSpacing="0.07"
+                    android:text="Фамилия*"
+                    android:textColor="@color/white"
+                    android:textFontWeight="600"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/surname_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="24dp"
+                    android:background="@drawable/rounded_edittext"
+                    android:fontFamily="@font/oswald"
+                    android:hint="Ваша фамилия"
+                    android:letterSpacing="0.01"
+                    android:padding="14dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#707070"
+                    android:textFontWeight="400"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="24dp"
+                    android:fontFamily="@font/oswald"
+                    android:letterSpacing="0.07"
+                    android:text="Отчество"
+                    android:textColor="@color/white"
+                    android:textFontWeight="600"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/middle_name_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="24dp"
+                    android:background="@drawable/rounded_edittext"
+                    android:fontFamily="@font/oswald"
+                    android:hint="Ваше отчество"
+                    android:letterSpacing="0.01"
+                    android:padding="14dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#707070"
+                    android:textFontWeight="400"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="24dp"
+                    android:fontFamily="@font/oswald"
+                    android:letterSpacing="0.07"
+                    android:text="Область*"
+                    android:textColor="@color/white"
+                    android:textFontWeight="600"
+                    android:textSize="14sp" />
+
+                <Spinner
+                    android:id="@+id/region_sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="24dp"
+                    android:background="@drawable/custom_spinner"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="24dp"
+                    android:fontFamily="@font/oswald"
+                    android:letterSpacing="0.07"
+                    android:text="Категория спорта*"
+                    android:textColor="@color/white"
+                    android:textFontWeight="600"
+                    android:textSize="14sp" />
+
+                <Spinner
+                    android:id="@+id/category_sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="24dp"
+                    android:background="@drawable/custom_spinner"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="24dp"
+                    android:fontFamily="@font/oswald"
+                    android:letterSpacing="0.07"
+                    android:text="Вид спорта*"
+                    android:textColor="@color/white"
+                    android:textFontWeight="600"
+                    android:textSize="14sp" />
+
+                <Spinner
+                    android:id="@+id/type_of_sport_sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="24dp"
+                    android:background="@drawable/custom_spinner"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="24dp"
+                    android:fontFamily="@font/oswald"
+                    android:letterSpacing="0.07"
+                    android:text="Организация*"
+                    android:textColor="@color/white"
+                    android:textFontWeight="600"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/organisation_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="24dp"
+                    android:background="@drawable/rounded_edittext"
+                    android:fontFamily="@font/oswald"
+                    android:hint="Из какой вы огранизации?"
+                    android:letterSpacing="0.01"
+                    android:padding="14dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textFontWeight="400"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="24dp"
+                    android:fontFamily="@font/oswald"
+                    android:letterSpacing="0.07"
+                    android:text="*Прикрепите документ подтверждающий вашу квалификацию тренера"
+                    android:textColor="@color/white"
+                    android:textFontWeight="600"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/attach_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_below="@id/confirm_button"
+                    android:layout_alignLeft="@id/frame"
+                    android:layout_alignRight="@id/frame"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="24dp"
+                    android:background="@drawable/rounded_transparent_button_with_stroke"
+                    android:fontFamily="@font/oswald"
+                    android:letterSpacing="0.06"
+                    android:text="Прикрепить документ"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textFontWeight="700"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+
+                <LinearLayout
+                    android:id="@+id/files_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/file1"
+                        android:layout_width="155dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/rounded_img_view"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/file2"
+                        android:layout_width="155dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="24dp"
+                        android:background="@drawable/rounded_img_view"
+                        android:scaleType="centerCrop" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/register_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="36dp"
+                    android:background="@drawable/rounded_red_btn"
+                    android:fontFamily="@font/oswald"
+                    android:letterSpacing="0.06"
+                    android:text="ЗАРЕГИСТРИРОВАТЬСЯ"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textFontWeight="700"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

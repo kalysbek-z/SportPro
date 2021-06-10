@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.registration.PhoneNumberFragment">
+
+    <ImageView
+        android:id="@+id/profile_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/profile_background_img" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/phone_number_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:navigationIcon="@drawable/ic_back" />
+
+        <ImageView
+            android:id="@+id/red_logo_profile"
+            android:layout_width="125dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="32dp"
+            android:src="@drawable/sport_pro_red_logo" />
+
+        <TextView
+            android:id="@+id/enter_as_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="19dp"
+            android:fontFamily="@font/oswald"
+            android:text="Вход"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textFontWeight="600"
+            android:textSize="32sp" />
+
+        <LinearLayout
+            android:layout_width="328dp"
+            android:layout_height="198dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="96dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="328dp"
+                android:layout_height="198dp">
+
+                <View
+                    android:id="@+id/frame"
+                    android:layout_width="328dp"
+                    android:layout_height="198dp"
+                    android:alpha="0.5"
+                    android:background="@drawable/rounded_profile_btn" />
+
+                <TextView
+                    android:id="@+id/phone_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="36dp"
+                    android:fontFamily="@font/oswald"
+                    android:text="Телефон"
+                    android:textColor="@color/white"
+                    android:textFontWeight="500"
+                    android:textSize="14sp" />
+
+                <com.santalu.maskara.widget.MaskEditText
+                    android:id="@+id/phone_number_edit_text"
+                    android:layout_width="280dp"
+                    android:layout_height="44dp"
+                    android:layout_below="@id/phone_tv"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="24dp"
+                    android:background="@drawable/rounded_edittext"
+                    android:fontFamily="@font/oswald"
+                    android:hint="+996 (XXX) XX XX XX"
+                    android:inputType="phone"
+                    android:letterSpacing="0.12"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textColorHint="#707070"
+                    android:textFontWeight="500"
+                    android:textSize="16sp"
+                    app:mask="+996 (###) ## ## ##"
+                    app:maskCharacter="#"
+                    app:maskStyle="normal" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/sign_in_btn"
+                    android:layout_width="280dp"
+                    android:layout_height="44dp"
+                    android:layout_below="@id/phone_number_edit_text"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="24dp"
+                    android:background="@drawable/rounded_red_btn"
+                    android:backgroundTint="#ED2840"
+                    android:fontFamily="@font/oswald"
+                    android:letterSpacing="0.06"
+                    android:text="Войти"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textFontWeight="600"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

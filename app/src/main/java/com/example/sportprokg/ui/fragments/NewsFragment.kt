@@ -6,7 +6,7 @@ import android.view.*
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.sportprokg.DetailedNewsActivity
+import com.example.sportprokg.ui.DetailedNewsActivity
 import com.example.sportprokg.R
 import com.example.sportprokg.adapters.NewsAdapter
 import com.example.sportprokg.models.NewsItem

@@ -7,7 +7,12 @@
     android:layout_height="match_parent"
     android:background="@color/black"
     android:orientation="vertical"
-    tools:context=".ui.fragments.AccountFragment">
+    tools:context=".ui.fragments.registration.RoleFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/not_visible_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <ImageView
         android:id="@+id/profile_background"
@@ -20,6 +25,7 @@
         android:id="@+id/red_logo_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/not_visible_toolbar"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         android:src="@drawable/sport_pro_red_logo" />
@@ -32,6 +38,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="110dp"
         android:fontFamily="@font/oswald"
+        android:letterSpacing="0.03"
         android:text="Войти как"
         android:textAllCaps="true"
         android:textColor="@color/white"
@@ -74,6 +81,7 @@
         android:layout_marginBottom="24dp"
         android:fontFamily="@font/oswald"
         android:gravity="center"
+        android:letterSpacing="0.09"
         android:text="Тренер"
         android:textAllCaps="true"
         android:textColor="@color/white"
@@ -115,6 +123,7 @@
         android:layout_marginBottom="24dp"
         android:fontFamily="@font/oswald"
         android:gravity="center"
+        android:letterSpacing="0.09"
         android:text="Судья"
         android:textAllCaps="true"
         android:textColor="@color/white"

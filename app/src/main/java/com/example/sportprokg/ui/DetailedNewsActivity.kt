@@ -1,7 +1,8 @@
-package com.example.sportprokg
+package com.example.sportprokg.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.sportprokg.R
 
 class DetailedNewsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

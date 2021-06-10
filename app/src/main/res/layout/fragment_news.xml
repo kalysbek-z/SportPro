@@ -60,6 +60,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/oswald"
+        android:letterSpacing="0.04"
         android:text="НОВОСТИ"
         android:textColor="@color/white"
         android:textFontWeight="600"

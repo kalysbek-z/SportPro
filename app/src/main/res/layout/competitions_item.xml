@@ -11,8 +11,7 @@
         android:id="@+id/comp_image"
         android:layout_width="match_parent"
         android:layout_height="160dp"
-        android:alpha="0.4"
-
+        android:foreground="@drawable/image_shadow"
         android:scaleType="centerCrop"
         android:src="@drawable/news_sample_img" />
 

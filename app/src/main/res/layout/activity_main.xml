@@ -13,7 +13,6 @@
         android:layout_height="match_parent"
         android:layout_above="@+id/bottomNavigationView"
         android:layout_alignParentTop="true"
-        app:defaultNavHost="true"
         app:navGraph="@navigation/app_nav" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -22,6 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@android:color/black"
+        android:paddingTop="8dp"
         app:itemIconTint="@drawable/tab_color"
         app:itemTextAppearanceActive="@style/BottomNav.Text"
         app:itemTextAppearanceInactive="@style/BottomNav.Text"
