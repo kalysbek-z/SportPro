@@ -5,14 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.widget.Toolbar
 import androidx.navigation.Navigation
-import androidx.navigation.fragment.findNavController
 import com.example.sportprokg.R
 import kotlinx.android.synthetic.main.fragment_confirmation.view.*
-import kotlinx.android.synthetic.main.fragment_phone_number.view.*
+import kotlinx.android.synthetic.main.fragment_registration.view.*
 
-class PhoneNumberFragment : Fragment() {
+class ConfirmationFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,19 +22,17 @@ class PhoneNumberFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_phone_number, container, false)
+        val view = inflater.inflate(R.layout.fragment_confirmation, container, false)
 
-        view.sign_in_btn.setOnClickListener {
-            Navigation.findNavController(view)
-                .navigate(R.id.action_phoneNumberFragment_to_confirmationFragment)
+        view.confirm_button.setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_confirmationFragment_to_registrationFragment)
         }
 
-        view.phone_number_toolbar.setNavigationIcon(R.drawable.ic_back)
-        view.phone_number_toolbar.setNavigationOnClickListener {
+        view.confirm_toolbar.setNavigationIcon(R.drawable.ic_back)
+        view.confirm_toolbar.setNavigationOnClickListener {
             Navigation.findNavController(view)
-                .navigate(R.id.action_phoneNumberFragment_to_roleFragment)
+                .navigate(R.id.action_confirmationFragment_to_phoneNumberFragment)
         }
-
         return view
     }
 

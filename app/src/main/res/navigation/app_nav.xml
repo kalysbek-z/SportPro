@@ -33,18 +33,44 @@
         <action
             android:id="@+id/action_phoneNumberFragment_to_confirmationFragment"
             app:destination="@id/confirmationFragment" />
+        <action
+            android:id="@+id/action_phoneNumberFragment_to_roleFragment"
+            app:destination="@id/roleFragment"
+            app:popUpTo="@id/roleFragment" />
     </fragment>
     <fragment
         android:id="@+id/confirmationFragment"
-        android:name="com.example.sportprokg.ConfirmationFragment"
+        android:name="com.example.sportprokg.ui.fragments.registration.ConfirmationFragment"
         android:label="ConfirmationFragment" >
         <action
             android:id="@+id/action_confirmationFragment_to_registrationFragment"
             app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_confirmationFragment_to_phoneNumberFragment"
+            app:destination="@id/phoneNumberFragment"
+            app:popUpTo="@id/phoneNumberFragment" />
     </fragment>
     <fragment
         android:id="@+id/registrationFragment"
-        android:name="com.example.sportprokg.RegistrationFragment"
+        android:name="com.example.sportprokg.ui.fragments.registration.RegistrationFragment"
         android:label="fragment_registration"
-        tools:layout="@layout/fragment_registration" />
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_registrationFragment_to_requestSentFragment"
+            app:destination="@id/requestSentFragment" />
+        <action
+            android:id="@+id/action_registrationFragment_to_confirmationFragment"
+            app:destination="@id/confirmationFragment"
+            app:popUpTo="@id/confirmationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/requestSentFragment"
+        android:name="com.example.sportprokg.ui.fragments.registration.RequestSentFragment"
+        android:label="fragment_request_sent"
+        tools:layout="@layout/fragment_request_sent" >
+        <action
+            android:id="@+id/action_requestSentFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment"
+            app:popUpTo="@id/registrationFragment" />
+    </fragment>
 </navigation>

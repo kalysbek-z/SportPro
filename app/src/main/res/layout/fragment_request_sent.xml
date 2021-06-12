@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.registration.RegistrationFragment">
+
+    <ImageView
+        android:id="@+id/profile_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/profile_background_img" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/req_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp" />
+
+    <ImageView
+        android:id="@+id/red_logo_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/req_toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/sport_pro_red_logo" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/rounded_profile_btn"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="36dp"
+            android:src="@drawable/ic_success" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginRight="48dp"
+            android:layout_marginBottom="36dp"
+            android:fontFamily="@font/lato"
+            android:text="Ваш запрос на\nрегистрацию отправлен\nк администратору"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textFontWeight="900"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -14,7 +14,7 @@
         android:src="@drawable/profile_background_img" />
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/phone_number_toolbar"
+        android:id="@+id/confirm_toolbar"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         app:navigationIcon="@drawable/ic_back" />
@@ -23,7 +23,7 @@
         android:id="@+id/red_logo_profile"
         android:layout_width="125dp"
         android:layout_height="35dp"
-        android:layout_below="@id/phone_number_toolbar"
+        android:layout_below="@id/confirm_toolbar"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="24dp"
@@ -41,7 +41,6 @@
         android:layout_marginTop="40dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="218dp"
-        android:alpha="0.5"
         android:background="@drawable/rounded_profile_btn" />
 
     <TextView
