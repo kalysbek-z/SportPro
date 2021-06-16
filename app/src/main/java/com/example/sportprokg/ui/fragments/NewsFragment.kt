@@ -5,14 +5,26 @@ import android.os.Bundle
 import android.view.*
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.sportprokg.ui.DetailedNewsActivity
+import androidx.recyclerview.widget.RecyclerView
+import com.example.sportprokg.ui.Activities.DetailedNewsActivity
 import com.example.sportprokg.R
 import com.example.sportprokg.adapters.NewsAdapter
-import com.example.sportprokg.models.NewsItem
+import com.example.sportprokg.api.RequestInstance
+import com.example.sportprokg.api.ServiceAPI
+import com.example.sportprokg.models.news.NewsItem
+import com.example.sportprokg.ui.NewsViewModel
+import kotlinx.android.synthetic.main.fragment_news.*
 import kotlinx.android.synthetic.main.fragment_news.view.*
+import retrofit2.Call
+import retrofit2.Response
 
 class NewsFragment : Fragment(), NewsAdapter.OnItemClickListener {
+
+    lateinit var newsAdapter: NewsAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,10 +40,8 @@ class NewsFragment : Fragment(), NewsAdapter.OnItemClickListener {
         val toolbar = view.findViewById<Toolbar>(R.id.news_toolbar)
         toolbar.inflateMenu(R.menu.filter_toolbar_menu)
 
-        view.news_recyclerview.layoutManager = LinearLayoutManager(requireContext())
-        view.news_recyclerview.adapter =
-            NewsAdapter(dummyData(), this)
-        view.news_recyclerview.setHasFixedSize(true)
+        initRecyclerView(view)
+        getNews(view)
 
         return view
     }
@@ -43,50 +53,30 @@ class NewsFragment : Fragment(), NewsAdapter.OnItemClickListener {
 
 
     override fun onItemClick(position: Int) {
-        val intent = Intent(this@NewsFragment.context, DetailedNewsActivity::class.java)
+        
+
+        val intent = Intent(requireContext(), DetailedNewsActivity::class.java)
         startActivity(intent)
     }
 
-    private fun dummyData(): List<NewsItem> {
-        val list = mutableListOf<NewsItem>()
+    private fun initRecyclerView(view: View) {
+        view.news_recyclerview.layoutManager = LinearLayoutManager(requireContext())
+        newsAdapter = NewsAdapter(this@NewsFragment, requireContext())
+        view.news_recyclerview.adapter = newsAdapter
+        view.news_recyclerview.setHasFixedSize(true)
+    }
 
-        list.add(
-            NewsItem(
-                "баскетбол",
-                "какая-то новость",
-                "01.01.2021"
-            )
-        )
-        list.add(
-            NewsItem(
-                "футбол",
-                "какая-то новость",
-                "01.01.2021"
-            )
-        )
-        list.add(
-            NewsItem(
-                "ушу",
-                "какая-то новость",
-                "01.01.2021"
-            )
-        )
-        list.add(
-            NewsItem(
-                "дота 2",
-                "какая-то новость",
-                "01.01.2021"
-            )
-        )
-        list.add(
-            NewsItem(
-                "баскетбол",
-                "какая-то новость",
-                "01.01.2021"
-            )
-        )
+    fun getNews(view: View) {
+        val viewModel = ViewModelProviders.of(this).get(NewsViewModel::class.java)
+        viewModel.getNewsListObserver().observe(viewLifecycleOwner, Observer<MutableList<NewsItem>> {
+            if (it != null) {
+                newsAdapter.setData(it as MutableList<NewsItem>)
+                newsAdapter.notifyDataSetChanged()
+            } else {
 
-        return list
+            }
+        })
+        viewModel.makeApiCall()
     }
 }
 

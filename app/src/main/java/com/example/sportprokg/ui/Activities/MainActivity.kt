@@ -1,4 +1,4 @@
-package com.example.sportprokg.ui
+package com.example.sportprokg.ui.Activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

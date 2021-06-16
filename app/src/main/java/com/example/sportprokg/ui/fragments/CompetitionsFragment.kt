@@ -9,11 +9,8 @@ import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sportprokg.R
 import com.example.sportprokg.adapters.CompetitionsAdapter
-import com.example.sportprokg.adapters.NewsAdapter
 import com.example.sportprokg.models.CompetitionsItem
-import com.example.sportprokg.models.NewsItem
 import kotlinx.android.synthetic.main.fragment_competitions.view.*
-import kotlinx.android.synthetic.main.fragment_news.view.*
 
 class CompetitionsFragment : Fragment() {
 

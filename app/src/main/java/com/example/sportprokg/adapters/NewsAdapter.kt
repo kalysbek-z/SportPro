@@ -1,19 +1,29 @@
 package com.example.sportprokg.adapters
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.sportprokg.R
-import com.example.sportprokg.models.NewsItem
-import com.example.sportprokg.ui.fragments.NewsFragment
+import com.example.sportprokg.models.news.NewsItem
+import kotlinx.android.synthetic.main.news_item.view.*
 
 class NewsAdapter(
-    private val newsList: List<NewsItem>,
-    private val listener: OnItemClickListener
+    private val listener: OnItemClickListener,
+    val context : Context
 ) :
     RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
+
+    var newsList = emptyList<NewsItem>()
+
+    fun setData(data: MutableList<NewsItem>){
+        this.newsList = data
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsViewHolder {
         val itemView = LayoutInflater.from(parent.context)
@@ -27,17 +37,25 @@ class NewsAdapter(
     }
 
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
-        holder.sport?.text = newsList[position].sport
-        holder.title?.text = newsList[position].title
-        holder.date?.text = newsList[position].date
+        val currentItem = newsList[position]
+
+        Glide.with(context)
+            .load(currentItem.image)
+            .centerCrop()
+            .into(holder.newsImage)
+
+        holder.newsTitle.text = currentItem.title
+        holder.newsDate.text = currentItem.createdAt
+        holder.newsSportType.text = "Баскетбол"
 
     }
 
     inner class NewsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
         View.OnClickListener {
-        var sport: TextView = itemView.findViewById(R.id.news_typeof_sport)
-        var title: TextView = itemView.findViewById(R.id.news_title)
-        var date: TextView = itemView.findViewById(R.id.news_date)
+        val newsImage: ImageView = itemView.news_image
+        val newsSportType: TextView = itemView.news_typeof_sport
+        val newsTitle: TextView = itemView.news_title
+        val newsDate: TextView = itemView.news_date
 
         init {
             itemView.setOnClickListener(this)
