@@ -6,7 +6,7 @@ import retrofit2.http.GET
 
 interface ServiceAPI {
 
-    @GET("api/news/news/")
+    @GET("api/news/")
     fun getNews(): Call<MutableList<NewsItem>>
 
 }

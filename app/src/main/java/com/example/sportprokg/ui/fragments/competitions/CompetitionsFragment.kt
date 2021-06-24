@@ -1,5 +1,6 @@
-package com.example.sportprokg.ui.fragments
+package com.example.sportprokg.ui.fragments.competitions
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,9 +11,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sportprokg.R
 import com.example.sportprokg.adapters.CompetitionsAdapter
 import com.example.sportprokg.models.CompetitionsItem
+import com.example.sportprokg.ui.Activities.DetailedCompetitionsActivity
 import kotlinx.android.synthetic.main.fragment_competitions.view.*
 
-class CompetitionsFragment : Fragment() {
+class CompetitionsFragment : Fragment(), CompetitionsAdapter.OnItemClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +31,7 @@ class CompetitionsFragment : Fragment() {
 
         view.comp_recycler.layoutManager = LinearLayoutManager(requireContext())
         view.comp_recycler.adapter =
-            CompetitionsAdapter(dummyData())
+            CompetitionsAdapter(dummyData(), this@CompetitionsFragment)
         view.comp_recycler.setHasFixedSize(true)
 
         return view
@@ -94,5 +96,11 @@ class CompetitionsFragment : Fragment() {
         )
 
         return list
+    }
+
+    override fun onItemClick(position: Int) {
+        val intent =
+            Intent(this@CompetitionsFragment.context, DetailedCompetitionsActivity::class.java)
+        startActivity(intent)
     }
 }

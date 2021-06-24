@@ -29,8 +29,10 @@
         android:src="@drawable/sport_pro_red_logo" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_centerInParent="true"
         android:background="@drawable/rounded_profile_btn"
         android:orientation="vertical">
@@ -47,6 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="48dp"
             android:layout_marginTop="14dp"
+            android:layout_gravity="center_horizontal"
             android:layout_marginRight="48dp"
             android:layout_marginBottom="36dp"
             android:fontFamily="@font/lato"

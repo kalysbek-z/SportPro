@@ -15,14 +15,18 @@ import kotlinx.android.synthetic.main.news_item.view.*
 
 class NewsAdapter(
     private val listener: OnItemClickListener,
-    val context : Context
+    val context: Context
 ) :
     RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
 
     var newsList = emptyList<NewsItem>()
 
-    fun setData(data: MutableList<NewsItem>){
+    fun setData(data: MutableList<NewsItem>) {
         this.newsList = data
+    }
+
+    fun getArticle(position: Int): NewsItem {
+        return newsList[position]
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsViewHolder {
@@ -45,9 +49,12 @@ class NewsAdapter(
             .into(holder.newsImage)
 
         holder.newsTitle.text = currentItem.title
-        holder.newsDate.text = currentItem.createdAt
-        holder.newsSportType.text = "Баскетбол"
-
+        holder.newsDate.text = currentItem.createdAt?.substring(0, 10)
+        when (currentItem.sport_id) {
+            1 -> holder.newsSportType.text = "Дзюдо"
+            2 -> holder.newsSportType.text = "Ушу"
+            else -> holder.newsSportType.text = ""
+        }
     }
 
     inner class NewsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),

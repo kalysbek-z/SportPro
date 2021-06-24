@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".ui.Activities.DetailedCompetitionsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@drawable/ic_back"
+        app:title="Назад"
+        app:titleTextAppearance="@style/ToolBarAppearance"
+        app:titleTextColor="@color/white" />
+
+    <TextView
+        android:id="@+id/detailed_comp_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/oswald"
+        android:letterSpacing="0.01"
+        android:text="Открытое первенство по Таэквандо"
+        android:textColor="@color/white"
+        android:textFontWeight="700"
+        android:textSize="20sp" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/det_comp_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/black"
+        app:tabBackground="@color/black"
+        app:tabGravity="fill"
+        app:tabIndicatorGravity="bottom"
+        app:tabIndicatorAnimationMode="linear"
+        app:tabIndicatorColor="#ED2840"
+        app:tabIndicatorFullWidth="true"
+        app:tabIndicatorHeight="3dp"
+        app:tabMode="scrollable"
+        app:tabTextAppearance="@style/TabLayoutAppearance"
+        app:tabTextColor="@color/white" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/det_comp_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

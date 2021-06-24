@@ -7,13 +7,13 @@
 
     <fragment
         android:id="@+id/newsFragment"
-        android:name="com.example.sportprokg.ui.fragments.NewsFragment"
+        android:name="com.example.sportprokg.ui.fragments.news.NewsFragment"
         android:label="Новости"
         tools:layout="@layout/fragment_news"
         app:defaultNavHost="true"/>
     <fragment
         android:id="@+id/competitionsFragment"
-        android:name="com.example.sportprokg.ui.fragments.CompetitionsFragment"
+        android:name="com.example.sportprokg.ui.fragments.competitions.CompetitionsFragment"
         android:label="Соревнования"
         tools:layout="@layout/fragment_competitions" />
     <fragment

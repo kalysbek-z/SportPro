@@ -80,7 +80,7 @@
                     android:textFontWeight="500"
                     android:textSize="14sp" />
 
-                <com.santalu.maskara.widget.MaskEditText
+                <com.hipo.maskededittext.MaskedEditText
                     android:id="@+id/phone_number_edit_text"
                     android:layout_width="280dp"
                     android:layout_height="44dp"
@@ -90,17 +90,17 @@
                     android:layout_marginRight="24dp"
                     android:background="@drawable/rounded_edittext"
                     android:fontFamily="@font/oswald"
-                    android:hint="+996 (XXX) XX XX XX"
                     android:inputType="phone"
+                    app:maskType="custom"
+                    app:maskPattern="+996 (###) ## ## ##"
+                    app:returnPattern="+996 ### ## ## ##"
+                    android:hint="+996 (XXX) XX XX XX"
                     android:letterSpacing="0.12"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textColorHint="#707070"
                     android:textFontWeight="500"
-                    android:textSize="16sp"
-                    app:mask="+996 (###) ## ## ##"
-                    app:maskCharacter="#"
-                    app:maskStyle="normal" />
+                    android:textSize="16sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/sign_in_btn"

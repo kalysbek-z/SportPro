@@ -26,4 +26,19 @@
         <item name="android:statusBarColor">@color/black</item>
     </style>
 
+    <style name="ToolBarAppearance">
+        <item name="android:fontFamily">@font/oswald</item>
+        <item name="android:textSize">18sp</item>
+        <item name="fontWeight">500</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+
+    <style name="TabLayoutAppearance">
+        <item name="android:fontFamily">@font/oswald</item>
+        <item name="android:textSize">16sp</item>
+        <item name="fontWeight">500</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
 </resources>

@@ -29,119 +29,121 @@
         android:layout_marginTop="24dp"
         android:src="@drawable/sport_pro_red_logo" />
 
-    <View
-        android:id="@+id/frame"
-        android:layout_width="328dp"
-        android:layout_height="358dp"
+    <!--    <View-->
+    <!--        android:id="@+id/frame"-->
+    <!--        android:layout_width="328dp"-->
+    <!--        android:layout_height="358dp"-->
+    <!--        android:layout_below="@+id/red_logo_profile"-->
+    <!--        android:layout_alignParentStart="true"-->
+    <!--        android:layout_alignParentEnd="true"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:layout_marginLeft="16dp"-->
+    <!--        android:layout_marginTop="40dp"-->
+    <!--        android:layout_marginRight="16dp"-->
+    <!--        android:layout_marginBottom="218dp"-->
+    <!--        android:background="@drawable/rounded_profile_btn" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/red_logo_profile"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="40dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="218dp"
-        android:background="@drawable/rounded_profile_btn" />
+        android:background="@drawable/rounded_profile_btn"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/enter_as_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/frame"
-        android:layout_alignTop="@id/frame"
-        android:layout_alignRight="@id/frame"
-        android:layout_marginLeft="45dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginRight="45dp"
-        android:fontFamily="@font/oswald"
-        android:gravity="center"
-        android:text="На  номер +996 777 77 77 77\n
+        <TextView
+            android:id="@+id/enter_as_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginRight="45dp"
+            android:fontFamily="@font/oswald"
+            android:gravity="center"
+            android:text="На  номер +996 777 77 77 77\n
 отправлен код подтверждения"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textFontWeight="700"
-        android:textSize="16sp" />
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textFontWeight="700"
+            android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/phone_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/enter_as_tv"
-        android:layout_alignLeft="@id/frame"
-        android:layout_alignRight="@id/frame"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginRight="24dp"
-        android:fontFamily="@font/oswald"
-        android:text="Код подтверждения"
-        android:textColor="@color/white"
-        android:textFontWeight="500"
-        android:textSize="14sp" />
+        <TextView
+            android:id="@+id/phone_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="24dp"
+            android:fontFamily="@font/oswald"
+            android:text="Код подтверждения"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="14sp" />
 
-    <com.santalu.maskara.widget.MaskEditText
-        android:id="@+id/confirm_code_edit_text"
-        android:layout_width="280dp"
-        android:layout_height="44dp"
-        android:layout_below="@id/phone_tv"
-        android:layout_alignLeft="@id/frame"
-        android:layout_alignRight="@+id/frame"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="24dp"
-        android:background="@drawable/rounded_edittext"
-        android:fontFamily="@font/montserrat"
-        android:hint="-- -- --"
-        android:inputType="numberDecimal"
-        android:letterSpacing="0.12"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:textFontWeight="500"
-        android:textSize="16sp"
-        app:mask="-- -- --"
-        app:maskCharacter="-"
-        app:maskStyle="normal" />
+        <com.hipo.maskededittext.MaskedEditText
+            android:id="@+id/confirm_code_edit_text"
+            android:layout_width="280dp"
+            android:layout_height="44dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/rounded_edittext"
+            android:fontFamily="@font/montserrat"
+            android:hint="-- -- --"
+            android:inputType="numberDecimal"
+            android:letterSpacing="0.12"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textFontWeight="500"
+            android:textSize="16sp"
+            app:maskType="custom"
+            app:maskPattern="## ## ##"
+            app:returnPattern="######"/>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/confirm_button"
-        android:layout_width="280dp"
-        android:layout_height="44dp"
-        android:layout_below="@id/confirm_code_edit_text"
-        android:layout_alignLeft="@id/frame"
-        android:layout_alignRight="@id/frame"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="24dp"
-        android:background="@drawable/rounded_red_btn"
-        android:backgroundTint="#ED2840"
-        android:fontFamily="@font/oswald"
-        android:letterSpacing="0.06"
-        android:text="ПОДТВЕРДИТЬ"
-        android:textAllCaps="true"
-        android:textColor="@color/white"
-        android:textFontWeight="700"
-        android:textSize="16sp"
-        android:textStyle="normal" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/confirm_button"
+            android:layout_width="280dp"
+            android:layout_height="44dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/rounded_red_btn"
+            android:backgroundTint="#ED2840"
+            android:fontFamily="@font/oswald"
+            android:letterSpacing="0.06"
+            android:text="ПОДТВЕРДИТЬ"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textFontWeight="700"
+            android:textSize="16sp"
+            android:textStyle="normal" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/send_again_button"
-        android:layout_width="280dp"
-        android:layout_height="44dp"
-        android:layout_below="@id/confirm_button"
-        android:layout_alignLeft="@id/frame"
-        android:layout_alignRight="@id/frame"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginBottom="36dp"
-        android:background="@drawable/rounded_transparent_button_with_stroke"
-        android:fontFamily="@font/oswald"
-        android:letterSpacing="0.06"
-        android:text="ЗАПРОСИТЬ ЕЩЕ РАЗ"
-        android:textAllCaps="true"
-        android:textColor="@color/white"
-        android:textFontWeight="700"
-        android:textSize="16sp"
-        android:textStyle="normal" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/send_again_button"
+            android:layout_width="280dp"
+            android:layout_height="44dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="36dp"
+            android:background="@drawable/rounded_transparent_button_with_stroke"
+            android:fontFamily="@font/oswald"
+            android:letterSpacing="0.06"
+            android:text="ЗАПРОСИТЬ ЕЩЕ РАЗ"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textFontWeight="700"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
 
 </RelativeLayout>

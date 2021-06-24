@@ -6,7 +6,9 @@ data class NewsItem(
     @SerializedName("created_at")
     var createdAt: String?, // date of the article
     var image: String?,
-    var text: String?,
+    @SerializedName("text")
+    var description: String?,
     var title: String?,
-    var user: Int?
+    var user: Int?,
+    var sport_id : Int?
 )
