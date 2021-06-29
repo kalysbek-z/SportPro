@@ -1,5 +1,6 @@
 package com.example.sportprokg.models.news
 
+import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
 data class NewsItem(
@@ -10,5 +11,12 @@ data class NewsItem(
     var description: String?,
     var title: String?,
     var user: Int?,
-    var sport_id : Int?
+    @SerializedName("sport")
+    var sportType : Sport?
 )
+
+public class Sport {
+    @SerializedName("title")
+    @Expose
+    var sport: String? = null
+}

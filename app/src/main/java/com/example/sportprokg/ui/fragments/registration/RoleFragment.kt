@@ -30,6 +30,10 @@ class RoleFragment : Fragment() {
             Navigation.findNavController(view).navigate(R.id.action_roleFragment_to_phoneNumberFragment)
         }
 
+        view.judge_btn.setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_roleFragment_to_phoneNumberFragment)
+        }
+
         return view
     }
 

@@ -49,6 +49,9 @@
             android:id="@+id/action_confirmationFragment_to_phoneNumberFragment"
             app:destination="@id/phoneNumberFragment"
             app:popUpTo="@id/phoneNumberFragment" />
+        <action
+            android:id="@+id/action_confirmationFragment_to_refreeFragment"
+            app:destination="@id/refreeFragment" />
     </fragment>
     <fragment
         android:id="@+id/registrationFragment"
@@ -72,5 +75,13 @@
             android:id="@+id/action_requestSentFragment_to_registrationFragment"
             app:destination="@id/registrationFragment"
             app:popUpTo="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_requestSentFragment_to_refreeFragment"
+            app:destination="@id/refreeFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/refreeFragment"
+        android:name="com.example.sportprokg.ui.fragments.RefereeFragment"
+        android:label="fragment_refree"
+        tools:layout="@layout/fragment_referee" />
 </navigation>

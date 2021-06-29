@@ -50,11 +50,7 @@ class NewsAdapter(
 
         holder.newsTitle.text = currentItem.title
         holder.newsDate.text = currentItem.createdAt?.substring(0, 10)
-        when (currentItem.sport_id) {
-            1 -> holder.newsSportType.text = "Дзюдо"
-            2 -> holder.newsSportType.text = "Ушу"
-            else -> holder.newsSportType.text = ""
-        }
+        holder.newsSportType.text = currentItem.sportType?.sport
     }
 
     inner class NewsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),

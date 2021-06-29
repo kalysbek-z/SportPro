@@ -1,21 +1,16 @@
-package com.example.sportprokg.ui.fragments.registration
+package com.example.sportprokg.ui.fragments
 
 import android.os.Bundle
-import android.os.Handler
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.Navigation
 import com.example.sportprokg.R
 
-
-class RequestSentFragment : Fragment() {
-
+class RefereeFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(
@@ -23,16 +18,7 @@ class RequestSentFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_request_sent, container, false)
-
-        val handler = Handler()
-        handler.postDelayed({
-            Navigation.findNavController(view)
-                .navigate(R.id.action_requestSentFragment_to_refreeFragment)
-        }, 3000)
-
-        return view
+        return inflater.inflate(R.layout.fragment_referee, container, false)
     }
-
 
 }
