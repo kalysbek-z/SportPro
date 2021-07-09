@@ -55,11 +55,21 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/appBarLayoutComp"
         android:layout_marginLeft="16dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="8dp"
         android:fontFamily="@font/oswald"
         android:text="СОВЕРНОВАНИЯ"
         android:textColor="@color/white"
         android:textFontWeight="600"
         android:textSize="24sp"
         android:textStyle="normal" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/page_name_comp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white" />
+
 </RelativeLayout>

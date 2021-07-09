@@ -7,10 +7,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sportprokg.R
 import com.example.sportprokg.models.CompetitionsItem
+import com.example.sportprokg.ui.fragments.referee.RefereeFragment
 
 class RefereeAdapter(
     private val compList: List<CompetitionsItem>,
-    private val listener: RefereeAdapter.OnItemClickListener
+    private val listener: RefereeFragment
 ) : RecyclerView.Adapter<RefereeAdapter.RefereeViewHolder>() {
 
     inner class RefereeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),

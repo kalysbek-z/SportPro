@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.referee.RefereeChooseCategoryActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/referee_category_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_back"
+        app:title="Назад"
+        app:titleTextAppearance="@style/ToolBarAppearance"
+        app:titleTextColor="@color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="@font/oswald"
+        android:letterSpacing="0.01"
+        android:text="ВЫБЕРИТЕ КАТЕГОРИЮ"
+        android:textColor="@color/white"
+        android:textFontWeight="700"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/referee_category_adults"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="16dp"
+        android:drawableBottom="@drawable/underline_textview"
+        android:drawablePadding="6dp"
+        android:fontFamily="@font/oswald"
+        android:text="Взрослые 1976-2002"
+        android:textColor="@color/selector_txt"
+        android:textFontWeight="500"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/referee_category_juniors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="16dp"
+        android:drawableBottom="@drawable/underline_textview"
+        android:drawablePadding="6dp"
+        android:fontFamily="@font/oswald"
+        android:text="Юниоры 2003-2005"
+        android:textColor="@color/selector_txt"
+        android:textFontWeight="500"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/referee_category_cadets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="16dp"
+        android:drawableBottom="@drawable/underline_textview"
+        android:drawablePadding="6dp"
+        android:fontFamily="@font/oswald"
+        android:text="Кадеты 2006-2008"
+        android:textColor="@color/selector_txt"
+        android:textFontWeight="500"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/referee_category_kids1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="16dp"
+        android:drawableBottom="@drawable/underline_textview"
+        android:drawablePadding="6dp"
+        android:fontFamily="@font/oswald"
+        android:text="Дети 2009-2010"
+        android:textColor="@color/selector_txt"
+        android:textFontWeight="500"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/referee_category_kids2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="16dp"
+        android:drawableBottom="@drawable/underline_textview"
+        android:drawablePadding="6dp"
+        android:fontFamily="@font/oswald"
+        android:text="Дети 8-9 лет 2011-2012"
+        android:textColor="@color/selector_txt"
+        android:textFontWeight="500"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/referee_category_kids3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="16dp"
+        android:drawableBottom="@drawable/underline_textview"
+        android:drawablePadding="6dp"
+        android:fontFamily="@font/oswald"
+        android:text="Дети 6-7 лет 2013-2014"
+        android:textColor="@color/selector_txt"
+        android:textFontWeight="500"
+        android:textSize="18sp" />
+
+</LinearLayout>

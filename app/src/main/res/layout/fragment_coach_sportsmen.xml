@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginBottom="40dp"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.coach.CoachSportsmenFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/coach_sportsman_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="40dp"
+        tools:listitem="@layout/sportsman_item" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/coach_add_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/rounded_red_btn"
+        android:backgroundTint="#ED2840"
+        android:fontFamily="@font/oswald"
+        android:letterSpacing="0.06"
+        android:text="+ Добавить спортсмена"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textFontWeight="700"
+        android:textSize="16sp"
+        android:textStyle="normal" />
+
+</LinearLayout>

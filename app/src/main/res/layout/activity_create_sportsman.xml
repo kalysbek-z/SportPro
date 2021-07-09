@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".SportsmanActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/sportsman_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/ic_back"
+            app:title="Назад"
+            app:titleTextAppearance="@style/ToolBarAppearance"
+            app:titleTextColor="@color/white" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/create_sportsman_img_btn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="100dp">
+
+            <ImageView
+                android:id="@+id/create_sportsman_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_camera" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/oswald"
+            android:letterSpacing="0.01"
+            android:text="Личные данные"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/create_sportsman_surname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="16dp"
+            android:drawableBottom="@drawable/underline_textview"
+            android:fontFamily="@font/oswald"
+            android:hint="Фамилия"
+            android:letterSpacing="0.01"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray"
+            android:textFontWeight="500"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/create_sportsman_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:drawableBottom="@drawable/underline_textview"
+            android:fontFamily="@font/oswald"
+            android:hint="Имя"
+            android:letterSpacing="0.01"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray"
+            android:textFontWeight="500"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/create_sportsman_midname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:drawableBottom="@drawable/underline_textview"
+            android:fontFamily="@font/oswald"
+            android:hint="Отчество"
+            android:letterSpacing="0.01"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray"
+            android:textFontWeight="500"
+            android:textSize="16sp" />
+
+        <com.hipo.maskededittext.MaskedEditText
+            android:id="@+id/sportsman_birthday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:drawableBottom="@drawable/underline_textview"
+            android:fontFamily="@font/oswald"
+            android:hint="Дата рождения"
+            android:inputType="date"
+            android:letterSpacing="0.01"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray"
+            android:textFontWeight="500"
+            android:textSize="16sp"
+            app:maskPattern="##.##.####"
+            app:maskType="custom"
+            app:returnPattern="##.##.####" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:id="@+id/create_sm_gender_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/ic_baseline_keyboard_arrow_down_24"
+                android:dropDownWidth="fill_parent"
+                android:spinnerMode="dropdown" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/oswald"
+            android:letterSpacing="0.01"
+            android:text="Контактные данные"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp">
+
+            <Spinner
+                android:id="@+id/create_sm_region_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/ic_baseline_keyboard_arrow_down_24"
+                android:dropDownWidth="fill_parent"
+                android:spinnerMode="dropdown" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+        </RelativeLayout>
+
+        <com.hipo.maskededittext.MaskedEditText
+            android:id="@+id/create_sm_sportsman_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:drawableBottom="@drawable/underline_textview"
+            android:drawablePadding="6dp"
+            android:fontFamily="@font/oswald"
+            android:hint="Номер телефона"
+            android:inputType="phone"
+            android:letterSpacing="0.01"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray"
+            android:textFontWeight="500"
+            android:textSize="16sp"
+            app:maskPattern="+996 (###) ## ## ##"
+            app:maskType="custom"
+            app:returnPattern="+996 ### ## ## ##" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/oswald"
+            android:letterSpacing="0.01"
+            android:text="Профессиональные данные"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp">
+
+            <EditText
+                android:id="@+id/create_sm_weight_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:drawableBottom="@drawable/underline_textview"
+                android:drawablePadding="6dp"
+                android:fontFamily="@font/oswald"
+                android:hint="Вес"
+                android:letterSpacing="0.01"
+                android:textColor="@color/white"
+                android:textColorHint="@color/gray"
+                android:textFontWeight="500"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/create_sportsman_kilogram_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/oswald"
+                android:letterSpacing="0.01"
+                android:text="кг"
+                android:textColor="@color/white"
+                android:textFontWeight="500"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp">
+
+            <Spinner
+                android:id="@+id/create_sm_category_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/ic_baseline_keyboard_arrow_down_24"
+                android:dropDownWidth="fill_parent"
+                android:spinnerMode="dropdown" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp">
+
+            <Spinner
+                android:id="@+id/create_sm_sporttype_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/ic_baseline_keyboard_arrow_down_24"
+                android:dropDownWidth="fill_parent"
+                android:spinnerMode="dropdown" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp">
+
+            <Spinner
+                android:id="@+id/create_sm_sport_name_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/ic_baseline_keyboard_arrow_down_24"
+                android:dropDownWidth="fill_parent"
+                android:spinnerMode="dropdown" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/create_sm_sportsman_organisation_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:drawableBottom="@drawable/underline_textview"
+            android:drawablePadding="6dp"
+            android:fontFamily="@font/oswald"
+            android:hint="Организация"
+            android:letterSpacing="0.01"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray"
+            android:textFontWeight="500"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/create_sm_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/rounded_red_btn"
+            android:backgroundTint="#ED2840"
+            android:fontFamily="@font/oswald"
+            android:letterSpacing="0.06"
+            android:text="Сохранить"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textFontWeight="700"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+</ScrollView>

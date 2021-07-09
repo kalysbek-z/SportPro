@@ -9,6 +9,7 @@
     tools:context=".ui.Activities.DetailedCompetitionsActivity">
 
     <androidx.appcompat.widget.Toolbar
+        android:id="@+id/det_comp_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:navigationIcon="@drawable/ic_back"

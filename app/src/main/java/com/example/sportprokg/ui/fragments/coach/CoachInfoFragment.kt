@@ -1,4 +1,4 @@
-package com.example.sportprokg.ui.fragments
+package com.example.sportprokg.ui.fragments.coach
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,10 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.sportprokg.R
 
-class RefereeFragment : Fragment() {
+class CoachInfoFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
     }
 
     override fun onCreateView(
@@ -18,7 +19,7 @@ class RefereeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_referee, container, false)
+        return inflater.inflate(R.layout.fragment_coach_info, container, false)
     }
 
 }

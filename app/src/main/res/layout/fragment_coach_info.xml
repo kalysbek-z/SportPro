@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    tools:context=".ui.fragments.coach.CoachInfoFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/oswald"
+            android:letterSpacing="0.01"
+            android:text="Личные данные"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/coach_surname_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:drawableBottom="@drawable/underline_textview"
+            android:drawablePadding="6dp"
+            android:fontFamily="@font/oswald"
+            android:shadowColor="@android:color/transparent"
+            android:letterSpacing="0.01"
+            android:text="Акматов"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/coach_first_name_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableBottom="@drawable/underline_textview"
+            android:drawablePadding="6dp"
+            android:fontFamily="@font/oswald"
+            android:letterSpacing="0.01"
+            android:text="Азамат"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/coach_mid_name_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableBottom="@drawable/underline_textview"
+            android:drawablePadding="6dp"
+            android:fontFamily="@font/oswald"
+            android:letterSpacing="0.01"
+            android:text="Акматович"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:fontFamily="@font/oswald"
+            android:letterSpacing="0.01"
+            android:text="Контактные данные"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/coach_region_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:drawableBottom="@drawable/underline_textview"
+            android:drawablePadding="6dp"
+            android:fontFamily="@font/oswald"
+            android:letterSpacing="0.01"
+            android:text="Чуй"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="16sp" />
+
+        <com.hipo.maskededittext.MaskedEditText
+            android:id="@+id/coach_phone_number_et"
+            app:maskPattern="+996 (###) ## ## ##"
+            app:maskType="custom"
+            app:returnPattern="+996 ### ## ## ##"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableBottom="@drawable/underline_textview"
+            android:drawablePadding="6dp"
+            android:fontFamily="@font/oswald"
+            android:inputType="phone"
+            android:letterSpacing="0.01"
+            android:text="+996 777 77 77 77"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:fontFamily="@font/oswald"
+            android:letterSpacing="0.01"
+            android:text="Профессиональные данные"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/coach_sport_type_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:drawableBottom="@drawable/underline_textview"
+            android:drawablePadding="6dp"
+            android:fontFamily="@font/oswald"
+            android:letterSpacing="0.01"
+            android:text="Олипийские виды спорта"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/coach_sport_name_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableBottom="@drawable/underline_textview"
+            android:drawablePadding="6dp"
+            android:fontFamily="@font/oswald"
+            android:letterSpacing="0.01"
+            android:text="Бокс"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/coach_organisation_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableBottom="@drawable/underline_textview"
+            android:drawablePadding="6dp"
+            android:fontFamily="@font/oswald"
+            android:letterSpacing="0.01"
+            android:text="WorldClass"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/referee_comp_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/rounded_red_btn"
+            android:backgroundTint="#ED2840"
+            android:fontFamily="@font/oswald"
+            android:letterSpacing="0.06"
+            android:text="Сохранить"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textFontWeight="700"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+</LinearLayout>

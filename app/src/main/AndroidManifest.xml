@@ -3,6 +3,8 @@
     package="com.example.sportprokg">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +13,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/SplashTheme">
-        <activity android:name=".ui.Activities.DetailedCompetitionsActivity"></activity>
+        <activity android:name=".CreateSportsmanActivity"></activity>
+        <activity android:name=".SportsmanActivity" />
+        <activity android:name=".ui.fragments.referee.RefereeJudgeActivity" />
+        <activity android:name=".ui.fragments.referee.RefereeChooseCategoryActivity" />
+        <activity android:name=".ui.Activities.RefereeCompetitionActivity" />
+        <activity android:name=".ui.Activities.DetailedCompetitionsActivity" />
         <activity android:name=".ui.Activities.DetailedNewsActivity" />
         <activity android:name=".ui.Activities.MainActivity">
             <intent-filter>

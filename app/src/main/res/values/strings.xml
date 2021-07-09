@@ -14,6 +14,16 @@
         <item>Чуй</item>
     </string-array>
 
+    <string-array name="regions2">
+        <item>Область</item>
+        <item>Баткен</item>
+        <item>Джалал-Абад</item>
+        <item>Иссык-Куль</item>
+        <item>Нарын</item>
+        <item>Ош</item>
+        <item>Талас</item>
+    </string-array>
+
     <string-array name="categories">
         <item>Выберите категорию</item>
         <item>Олимпийская</item>
@@ -21,11 +31,24 @@
         <item>Национальная</item>
     </string-array>
 
+    <string-array name="category_by_age">
+        <item>Взрослые</item>
+        <item>Юниоры</item>
+        <item>Кадеты</item>
+        <item>Дети</item>
+    </string-array>
+
     <string-array name="type_of_sport">
         <item>Выберите вид спорта</item>
         <item>Бокс</item>
         <item>Дзюдо</item>
         <item>Ушу</item>
+    </string-array>
+
+    <string-array name="genders">
+        <item>Пол</item>
+        <item>Мужской</item>
+        <item>Женский</item>
     </string-array>
 
 </resources>

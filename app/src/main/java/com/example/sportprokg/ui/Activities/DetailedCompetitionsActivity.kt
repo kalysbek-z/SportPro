@@ -8,6 +8,7 @@ import com.example.sportprokg.R
 import com.example.sportprokg.adapters.DetailedCompetitionsViewPagerAdapter
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import kotlinx.android.synthetic.main.activity_detailed_competitions.*
 
 class DetailedCompetitionsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,5 +42,10 @@ class DetailedCompetitionsActivity : AppCompatActivity() {
                 }
             }
         }.attach()
+
+        det_comp_toolbar.setNavigationIcon(R.drawable.ic_back)
+        det_comp_toolbar.setNavigationOnClickListener {
+            onBackPressed()
+        }
     }
 }
