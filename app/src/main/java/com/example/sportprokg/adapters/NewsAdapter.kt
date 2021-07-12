@@ -19,10 +19,11 @@ class NewsAdapter(
 ) :
     RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
 
-    var newsList = emptyList<NewsItem>()
+    var newsList = mutableListOf<NewsItem>()
 
     fun setData(data: MutableList<NewsItem>) {
         this.newsList = data
+        notifyDataSetChanged()
     }
 
     fun getArticle(position: Int): NewsItem {

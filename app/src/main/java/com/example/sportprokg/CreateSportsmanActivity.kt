@@ -1,4 +1,4 @@
-package com.example.sportprokg
+    package com.example.sportprokg
 
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -38,13 +38,7 @@ class CreateSportsmanActivity : AppCompatActivity() {
     }
 
     private fun requestGalleryPermission() {
-        if (ActivityCompat.checkSelfPermission(
-                this,
-                android.Manifest.permission.READ_EXTERNAL_STORAGE
-            ) != PackageManager.PERMISSION_GRANTED
-        ) {
-            ActivityCompat.requestPermissions(this, new String[] {android.Manifest.permission.CAMERA, Manife})
-        }
+
     }
 
     private fun loadProfilePhoto() {
