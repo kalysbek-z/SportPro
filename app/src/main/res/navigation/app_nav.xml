@@ -78,9 +78,6 @@
         <action
             android:id="@+id/action_requestSentFragment_to_refreeFragment"
             app:destination="@id/refreeFragment" />
-        <action
-            android:id="@+id/action_requestSentFragment_to_coachMainFragment"
-            app:destination="@id/coachMainFragment" />
     </fragment>
     <fragment
         android:id="@+id/refreeFragment"

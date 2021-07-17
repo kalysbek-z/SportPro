@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import com.example.sportprokg.R
+import com.example.sportprokg.ui.fragments.referee.RefereeFragment
 
 
 class RequestSentFragment : Fragment() {
@@ -27,9 +28,14 @@ class RequestSentFragment : Fragment() {
 
         val handler = Handler()
         handler.postDelayed({
-            Navigation.findNavController(view)
-                .navigate(R.id.action_requestSentFragment_to_coachMainFragment)
-        }, 3000)
+//            Navigation.findNavController(view)
+//                .navigate(R.id.action_requestSentFragment_to_refreeFragment)
+
+            val refereeFragment = RefereeFragment()
+            val transaction = fragmentManager?.beginTransaction()
+                ?.replace(R.id.fragment, refereeFragment)
+                ?.commit()
+        }, 1500)
 
         return view
     }

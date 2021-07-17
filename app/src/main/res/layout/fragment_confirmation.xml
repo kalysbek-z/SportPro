@@ -63,8 +63,7 @@
             android:layout_marginRight="45dp"
             android:fontFamily="@font/oswald"
             android:gravity="center"
-            android:text="На  номер +996 777 77 77 77\n
-отправлен код подтверждения"
+            android:text="На  номер +996 777 77 77 77\n отправлен код подтверждения"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textFontWeight="700"

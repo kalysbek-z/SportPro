@@ -7,9 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.sportprokg.CreateSportsmanActivity
+import com.example.sportprokg.ui.Activities.CreateSportsmanActivity
 import com.example.sportprokg.R
-import com.example.sportprokg.SportsmanActivity
+import com.example.sportprokg.ui.Activities.SportsmanActivity
 import com.example.sportprokg.adapters.SportsmenAdapter
 import com.example.sportprokg.models.SportsmanItem
 import kotlinx.android.synthetic.main.fragment_coach_sportsmen.view.*

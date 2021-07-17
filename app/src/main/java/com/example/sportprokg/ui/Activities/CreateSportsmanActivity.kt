@@ -1,24 +1,13 @@
-    package com.example.sportprokg
+    package com.example.sportprokg.ui.Activities
 
-import android.content.Intent
-import android.content.pm.PackageManager
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.MediaStore
-import android.view.View
-import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import android.widget.TextView
-import androidx.core.app.ActivityCompat
+import com.example.sportprokg.R
 import kotlinx.android.synthetic.main.activity_create_sportsman.*
-import kotlinx.android.synthetic.main.activity_sportsman.*
 import kotlinx.android.synthetic.main.activity_sportsman.sportsman_toolbar
-import kotlinx.android.synthetic.main.spinner_item2.*
-import org.w3c.dom.Text
-import java.util.jar.Manifest
 
-class CreateSportsmanActivity : AppCompatActivity() {
+    class CreateSportsmanActivity : AppCompatActivity() {
 
     companion object {
         private val IMAGE_CHOOSE = 1000;
@@ -87,19 +76,24 @@ class CreateSportsmanActivity : AppCompatActivity() {
 //                    return position != 0
 //                }
 //            }
-        val genderAdapter = ArrayAdapter(this, R.layout.spinner_item2, genders)
+        val genderAdapter = ArrayAdapter(this,
+            R.layout.spinner_item2, genders)
         create_sm_gender_spinner.adapter = genderAdapter
 
-        val regionAdapter = ArrayAdapter(this, R.layout.spinner_item2, regions)
+        val regionAdapter = ArrayAdapter(this,
+            R.layout.spinner_item2, regions)
         create_sm_region_spinner.adapter = regionAdapter
 
-        val categoryAdapter = ArrayAdapter(this, R.layout.spinner_item2, category)
+        val categoryAdapter = ArrayAdapter(this,
+            R.layout.spinner_item2, category)
         create_sm_category_spinner.adapter = categoryAdapter
 
-        val typeOfSportAdapter = ArrayAdapter(this, R.layout.spinner_item2, typeOfSport)
+        val typeOfSportAdapter = ArrayAdapter(this,
+            R.layout.spinner_item2, typeOfSport)
         create_sm_sporttype_spinner.adapter = typeOfSportAdapter
 
-        val sportNameAdapter = ArrayAdapter(this, R.layout.spinner_item2, sportName)
+        val sportNameAdapter = ArrayAdapter(this,
+            R.layout.spinner_item2, sportName)
         create_sm_sport_name_spinner.adapter = sportNameAdapter
     }
 }

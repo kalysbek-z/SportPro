@@ -1,8 +1,9 @@
-package com.example.sportprokg
+package com.example.sportprokg.ui.Activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import com.example.sportprokg.R
 import kotlinx.android.synthetic.main.activity_sportsman.*
 
 class SportsmanActivity : AppCompatActivity() {
@@ -56,19 +57,24 @@ class SportsmanActivity : AppCompatActivity() {
         val typeOfSport: Array<String> = resources.getStringArray(R.array.categories)
         val sportName: Array<String> = resources.getStringArray(R.array.type_of_sport)
 
-        val genderAdapter = ArrayAdapter(this, R.layout.spinner_item2, genders)
+        val genderAdapter = ArrayAdapter(this,
+            R.layout.spinner_item2, genders)
         gender_spinner.adapter = genderAdapter
 
-        val regionAdapter = ArrayAdapter(this, R.layout.spinner_item2, regions)
+        val regionAdapter = ArrayAdapter(this,
+            R.layout.spinner_item2, regions)
         region_spinner.adapter = regionAdapter
 
-        val categoryAdapter = ArrayAdapter(this, R.layout.spinner_item2, category)
+        val categoryAdapter = ArrayAdapter(this,
+            R.layout.spinner_item2, category)
         category_spinner.adapter = categoryAdapter
 
-        val typeOfSportAdapter = ArrayAdapter(this, R.layout.spinner_item2, typeOfSport)
+        val typeOfSportAdapter = ArrayAdapter(this,
+            R.layout.spinner_item2, typeOfSport)
         sporttype_spinner.adapter = typeOfSportAdapter
 
-        val sportNameAdapter = ArrayAdapter(this, R.layout.spinner_item2, sportName)
+        val sportNameAdapter = ArrayAdapter(this,
+            R.layout.spinner_item2, sportName)
         sport_name_spinner.adapter = sportNameAdapter
     }
 }
