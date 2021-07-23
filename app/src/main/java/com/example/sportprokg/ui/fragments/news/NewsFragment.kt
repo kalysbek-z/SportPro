@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.sportprokg.NewsFilterActivity
 import com.example.sportprokg.ui.Activities.DetailedNewsActivity
 import com.example.sportprokg.R
 import com.example.sportprokg.adapters.NewsAdapter
@@ -18,7 +19,9 @@ import com.example.sportprokg.models.news.NewsItem
 import com.example.sportprokg.repository.NewsRepository
 import com.example.sportprokg.ui.viewmodels.NewsViewModel
 import com.example.sportprokg.ui.viewmodels.NewsViewModelProviderFactory
+import kotlinx.android.synthetic.main.fragment_news.*
 import kotlinx.android.synthetic.main.fragment_news.view.*
+import org.jsoup.Jsoup
 
 class NewsFragment : Fragment(), NewsAdapter.OnItemClickListener {
 
@@ -36,10 +39,12 @@ class NewsFragment : Fragment(), NewsAdapter.OnItemClickListener {
         savedInstanceState: Bundle?
     ): View? {
 
-        //toolbar for news with filter button
         val view = inflater.inflate(R.layout.fragment_news, container, false)
-        val toolbar = view.findViewById<Toolbar>(R.id.news_toolbar)
-        toolbar.inflateMenu(R.menu.filter_toolbar_menu)
+
+        view.news_filter_btn.setOnClickListener {
+            val intent = Intent(requireContext(), NewsFilterActivity::class.java)
+            startActivity(intent)
+        }
 
         viewModel = ViewModelProvider(
             this,
@@ -60,19 +65,13 @@ class NewsFragment : Fragment(), NewsAdapter.OnItemClickListener {
         return view
     }
 
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.filter_toolbar_menu, menu)
-        super.onCreateOptionsMenu(menu, inflater)
-    }
-
-
     override fun onItemClick(position: Int) {
         val selectedArticle: NewsItem = newsAdapter.getArticle(position)
 
-        var mTitle = selectedArticle.title
+        var mTitle = Jsoup.parse(selectedArticle.title).text()
         var mImage = selectedArticle.image
         var mDate = selectedArticle.createdAt
-        var mDescription = selectedArticle.description
+        var mDescription = Jsoup.parse(selectedArticle.description).text()
 
         val intent = Intent(requireContext(), DetailedNewsActivity::class.java)
         intent.putExtra("title_key", mTitle)

@@ -56,6 +56,9 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:28.2.1')
     implementation 'com.google.firebase:firebase-auth-ktx'
 
+    //Jsoup html converter
+    implementation 'org.jsoup:jsoup:1.14.1'
+
     implementation 'com.hipo.maskededittext:maskededittext:1.2.10'
     compile 'ru.egslava:MaskedEditText:1.0.5'
 

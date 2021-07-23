@@ -12,6 +12,7 @@ import com.bumptech.glide.Glide
 import com.example.sportprokg.R
 import com.example.sportprokg.models.news.NewsItem
 import kotlinx.android.synthetic.main.news_item.view.*
+import org.jsoup.Jsoup
 
 class NewsAdapter(
     private val listener: OnItemClickListener,
@@ -49,7 +50,7 @@ class NewsAdapter(
             .centerCrop()
             .into(holder.newsImage)
 
-        holder.newsTitle.text = currentItem.title
+        holder.newsTitle.text = Jsoup.parse(currentItem.title).text()
         holder.newsDate.text = currentItem.createdAt?.substring(0, 10)
         holder.newsSportType.text = currentItem.sportType?.sport
     }

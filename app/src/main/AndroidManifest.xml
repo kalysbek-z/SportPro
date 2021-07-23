@@ -13,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/SplashTheme">
-        <activity android:name=".ui.Activities.CreateSportsmanActivity"></activity>
+        <activity android:name=".NewsFilterTypeActivity"></activity>
+        <activity android:name=".NewsFilterActivity" />
+        <activity android:name=".ui.Activities.CreateSportsmanActivity" />
         <activity android:name=".ui.Activities.SportsmanActivity" />
         <activity android:name=".ui.fragments.referee.RefereeJudgeActivity" />
         <activity android:name=".ui.fragments.referee.RefereeChooseCategoryActivity" />

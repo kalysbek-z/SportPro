@@ -91,8 +91,10 @@ class ConfirmationFragment : Fragment() {
 
         view.confirm_toolbar.setNavigationIcon(R.drawable.ic_back)
         view.confirm_toolbar.setNavigationOnClickListener {
-            Navigation.findNavController(view)
-                .navigate(R.id.action_confirmationFragment_to_phoneNumberFragment)
+            val phoneNumberFragment = PhoneNumberFragment()
+            val transaction = fragmentManager?.beginTransaction()
+                ?.replace(R.id.fragment, phoneNumberFragment)
+                ?.commit()
         }
         return view
     }

@@ -1,5 +1,6 @@
 package com.example.sportprokg.ui.fragments.registration
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -21,7 +22,8 @@ import java.util.concurrent.TimeUnit
 
 class PhoneNumberFragment : Fragment() {
 
-//    private var verificationID: String? = null
+    //    private var verificationID: String? = null
+    private lateinit var alertDialog: AlertDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,12 +41,18 @@ class PhoneNumberFragment : Fragment() {
 
             val bundle = Bundle()
             var phoneNumber = view.phone_number_edit_text.text.toString().trim()
-            bundle.putString("phone", phoneNumber)
-            val confirmationFragment = ConfirmationFragment()
-            confirmationFragment.arguments = bundle
-            val transaction = fragmentManager?.beginTransaction()
-                ?.replace(R.id.fragment, confirmationFragment)
-                ?.commit()
+            if (!phoneNumber.isEmpty() && phoneNumber.length == 19) {
+                view.incorrect_phone_num_tv.visibility = View.GONE
+
+                bundle.putString("phone", phoneNumber)
+                val confirmationFragment = ConfirmationFragment()
+                confirmationFragment.arguments = bundle
+                val transaction = fragmentManager?.beginTransaction()
+                    ?.replace(R.id.fragment, confirmationFragment)
+                    ?.commit()
+            } else {
+                view.incorrect_phone_num_tv.visibility = View.VISIBLE
+            }
 //            var intent = activity?.intent
 //            intent?.putExtra("phone", phoneNumber)
 
