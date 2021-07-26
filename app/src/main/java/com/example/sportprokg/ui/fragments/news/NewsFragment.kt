@@ -46,15 +46,18 @@ class NewsFragment : Fragment(), NewsAdapter.OnItemClickListener {
             startActivity(intent)
         }
 
+        view.news_progressbar.visibility = View.VISIBLE
+
         viewModel = ViewModelProvider(
             this,
             NewsViewModelProviderFactory(NewsRepository(retrofitService))
         ).get(NewsViewModel::class.java)
 
-        initRecyclerView(view)
+//        initRecyclerView(view)
 
         viewModel.newsList.observe(viewLifecycleOwner, Observer {
-            newsAdapter.setData(it)
+//            newsAdapter.setData(it)
+//            view.news_progressbar.visibility = View.GONE
         })
 
         viewModel.errorMessage.observe(viewLifecycleOwner, Observer {
