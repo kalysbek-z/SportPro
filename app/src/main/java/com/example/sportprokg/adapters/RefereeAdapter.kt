@@ -50,10 +50,10 @@ class RefereeAdapter(
     }
 
     override fun onBindViewHolder(holder: RefereeViewHolder, position: Int) {
-        holder.sport?.text = compList[position].sport
+        holder.sport?.text = "спорт"
         holder.status?.text = compList[position].status
         holder.title?.text = compList[position].title
         holder.startDate?.text = compList[position].startDate
-        holder.endDate?.text = compList[position].endDate
+        holder.endDate?.text = compList[position].finishDate
     }
 }

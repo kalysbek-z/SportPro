@@ -1,6 +1,7 @@
 package com.example.sportprokg.api
 
 import com.example.sportprokg.Utilities.ConstValues
+import com.example.sportprokg.models.CompetitionsItem
 import com.example.sportprokg.models.news.NewsItem
 import retrofit2.Call
 import retrofit2.Retrofit
@@ -9,8 +10,13 @@ import retrofit2.http.GET
 
 interface ServiceAPI {
 
+    //NEWS
     @GET("api/news/")
     fun getNews(): Call<MutableList<NewsItem>>
+
+    //COMPETITIONS
+    @GET("api/competitions/Competitions/")
+    fun getCompetitions(): Call<MutableList<CompetitionsItem>>
 
     companion object {
         var retrofitServiceAPI: ServiceAPI? = null

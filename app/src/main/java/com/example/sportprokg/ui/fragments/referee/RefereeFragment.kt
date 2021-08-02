@@ -26,10 +26,10 @@ class RefereeFragment : Fragment(), RefereeAdapter.OnItemClickListener {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_referee, container, false)
 
-        view.referee_comp_recycler.layoutManager = LinearLayoutManager(requireContext())
-        view.referee_comp_recycler.adapter =
-            RefereeAdapter(dummyData(), this@RefereeFragment)
-        view.referee_comp_recycler.setHasFixedSize(true)
+//        view.referee_comp_recycler.layoutManager = LinearLayoutManager(requireContext())
+//        view.referee_comp_recycler.adapter =
+//            RefereeAdapter(dummyData(), this@RefereeFragment)
+//        view.referee_comp_recycler.setHasFixedSize(true)
 
 
 
@@ -42,64 +42,64 @@ class RefereeFragment : Fragment(), RefereeAdapter.OnItemClickListener {
         startActivity(intent)
     }
 
-    private fun dummyData(): List<CompetitionsItem> {
-        val list = mutableListOf<CompetitionsItem>()
-
-        list.add(
-            CompetitionsItem(
-                "Таэквондо",
-                "регистрация открыта",
-                "Открытое первенство по Таэквондо",
-                "01.01.2021",
-                "01.01.2021"
-            )
-        )
-        list.add(
-            CompetitionsItem(
-                "Таэквондо",
-                "регистрация открыта",
-                "Открытое первенство по Таэквондо",
-                "01.01.2021",
-                "01.01.2021"
-            )
-        )
-        list.add(
-            CompetitionsItem(
-                "Таэквондо",
-                "регистрация открыта",
-                "Открытое первенство по Таэквондо",
-                "01.01.2021",
-                "01.01.2021"
-            )
-        )
-        list.add(
-            CompetitionsItem(
-                "Таэквондо",
-                "регистрация открыта",
-                "Открытое первенство по Таэквондо",
-                "01.01.2021",
-                "01.01.2021"
-            )
-        )
-        list.add(
-            CompetitionsItem(
-                "Таэквондо",
-                "регистрация открыта",
-                "Открытое первенство по Таэквондо",
-                "01.01.2021",
-                "01.01.2021"
-            )
-        )
-        list.add(
-            CompetitionsItem(
-                "Таэквондо",
-                "регистрация открыта",
-                "Открытое первенство по Таэквондо",
-                "01.01.2021",
-                "01.01.2021"
-            )
-        )
-
-        return list
-    }
+//    private fun dummyData(): List<CompetitionsItem> {
+//        val list = mutableListOf<CompetitionsItem>()
+//
+//        list.add(
+//            CompetitionsItem(
+//                "Таэквондо",
+//                "регистрация открыта",
+//                "Открытое первенство по Таэквондо",
+//                "01.01.2021",
+//                "01.01.2021"
+//            )
+//        )
+//        list.add(
+//            CompetitionsItem(
+//                "Таэквондо",
+//                "регистрация открыта",
+//                "Открытое первенство по Таэквондо",
+//                "01.01.2021",
+//                "01.01.2021"
+//            )
+//        )
+//        list.add(
+//            CompetitionsItem(
+//                "Таэквондо",
+//                "регистрация открыта",
+//                "Открытое первенство по Таэквондо",
+//                "01.01.2021",
+//                "01.01.2021"
+//            )
+//        )
+//        list.add(
+//            CompetitionsItem(
+//                "Таэквондо",
+//                "регистрация открыта",
+//                "Открытое первенство по Таэквондо",
+//                "01.01.2021",
+//                "01.01.2021"
+//            )
+//        )
+//        list.add(
+//            CompetitionsItem(
+//                "Таэквондо",
+//                "регистрация открыта",
+//                "Открытое первенство по Таэквондо",
+//                "01.01.2021",
+//                "01.01.2021"
+//            )
+//        )
+//        list.add(
+//            CompetitionsItem(
+//                "Таэквондо",
+//                "регистрация открыта",
+//                "Открытое первенство по Таэквондо",
+//                "01.01.2021",
+//                "01.01.2021"
+//            )
+//        )
+//
+//        return list
+//    }
 }

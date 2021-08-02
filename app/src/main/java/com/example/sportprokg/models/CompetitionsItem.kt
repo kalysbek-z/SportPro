@@ -1,9 +1,14 @@
 package com.example.sportprokg.models
 
+import com.google.gson.annotations.SerializedName
+
 data class CompetitionsItem(
-    var sport: String,
-    var status: String,
-    var title: String,
-    var startDate: String,
-    var endDate: String
+    var image: String?,
+    var title: String?,
+    var place: String?,
+    @SerializedName("start_date")
+    var startDate: String?,
+    @SerializedName("finish_date")
+    var finishDate: String?,
+    var status: String?
 )

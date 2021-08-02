@@ -22,19 +22,9 @@ class NewsAdapter(
 
     var newsList = mutableListOf<NewsItem>()
 
-    fun setData(data: MutableList<NewsItem>) {
-        this.newsList = data
-        notifyDataSetChanged()
-    }
-
-    fun getArticle(position: Int): NewsItem {
-        return newsList[position]
-    }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsViewHolder {
         val itemView = LayoutInflater.from(parent.context)
             .inflate(R.layout.news_item, parent, false)
-
         return NewsViewHolder(itemView)
     }
 
@@ -72,6 +62,15 @@ class NewsAdapter(
                 listener.onItemClick(position)
             }
         }
+    }
+
+    fun setData(data: MutableList<NewsItem>) {
+        this.newsList = data
+        notifyDataSetChanged()
+    }
+
+    fun getArticle(position: Int): NewsItem {
+        return newsList[position]
     }
 
     interface OnItemClickListener {

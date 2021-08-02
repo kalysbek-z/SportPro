@@ -3,12 +3,9 @@ package com.example.sportprokg.ui.fragments.news
 import android.content.Intent
 import android.os.Bundle
 import android.view.*
-import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sportprokg.NewsFilterActivity
 import com.example.sportprokg.ui.Activities.DetailedNewsActivity
@@ -19,7 +16,6 @@ import com.example.sportprokg.models.news.NewsItem
 import com.example.sportprokg.repository.NewsRepository
 import com.example.sportprokg.ui.viewmodels.NewsViewModel
 import com.example.sportprokg.ui.viewmodels.NewsViewModelProviderFactory
-import kotlinx.android.synthetic.main.fragment_news.*
 import kotlinx.android.synthetic.main.fragment_news.view.*
 import org.jsoup.Jsoup
 
@@ -53,11 +49,11 @@ class NewsFragment : Fragment(), NewsAdapter.OnItemClickListener {
             NewsViewModelProviderFactory(NewsRepository(retrofitService))
         ).get(NewsViewModel::class.java)
 
-//        initRecyclerView(view)
+        initRecyclerView(view)
 
         viewModel.newsList.observe(viewLifecycleOwner, Observer {
-//            newsAdapter.setData(it)
-//            view.news_progressbar.visibility = View.GONE
+            newsAdapter.setData(it)
+            view.news_progressbar.visibility = View.GONE
         })
 
         viewModel.errorMessage.observe(viewLifecycleOwner, Observer {

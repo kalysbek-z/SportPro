@@ -7,14 +7,26 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.Toolbar
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sportprokg.R
 import com.example.sportprokg.adapters.CompetitionsAdapter
-import com.example.sportprokg.models.CompetitionsItem
+import com.example.sportprokg.api.ServiceAPI
+import com.example.sportprokg.repository.CompetitionsRepository
 import com.example.sportprokg.ui.Activities.DetailedCompetitionsActivity
+import com.example.sportprokg.ui.viewmodels.CompetitionsViewModel
+import com.example.sportprokg.ui.viewmodels.CompetitionsViewModelProviderFactory
+import kotlinx.android.synthetic.main.fragment_competitions.*
 import kotlinx.android.synthetic.main.fragment_competitions.view.*
+import kotlinx.android.synthetic.main.fragment_news.view.*
 
 class CompetitionsFragment : Fragment(), CompetitionsAdapter.OnItemClickListener {
+
+    lateinit var compAdapter: CompetitionsAdapter
+    lateinit var viewModel: CompetitionsViewModel
+
+    private val retrofitService = ServiceAPI.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,73 +41,32 @@ class CompetitionsFragment : Fragment(), CompetitionsAdapter.OnItemClickListener
         val toolbar = view.findViewById<Toolbar>(R.id.competitions_toolbar)
         toolbar.inflateMenu(R.menu.filter_toolbar_menu)
 
-        view.comp_recycler.layoutManager = LinearLayoutManager(requireContext())
-        view.comp_recycler.adapter =
-            CompetitionsAdapter(dummyData(), this@CompetitionsFragment)
-        view.comp_recycler.setHasFixedSize(true)
+        view.comp_progressbar.visibility = View.VISIBLE
+        viewModel = ViewModelProvider(
+            this,
+            CompetitionsViewModelProviderFactory(CompetitionsRepository(retrofitService))
+        ).get(CompetitionsViewModel::class.java)
+
+        initRecyclerView(view)
+
+        viewModel.competitionsList.observe(viewLifecycleOwner, Observer {
+            compAdapter.setData(it)
+            view.comp_progressbar.visibility = View.GONE
+        })
+
+        viewModel.errorMessage.observe(viewLifecycleOwner, Observer {
+            //???
+        })
+        viewModel.getAllCompetitions()
 
         return view
     }
 
-    private fun dummyData(): List<CompetitionsItem> {
-        val list = mutableListOf<CompetitionsItem>()
-
-        list.add(
-            CompetitionsItem(
-                "Таэквондо",
-                "регистрация открыта",
-                "Открытое первенство по Таэквондо",
-                "01.01.2021",
-                "01.01.2021"
-            )
-        )
-        list.add(
-            CompetitionsItem(
-                "Таэквондо",
-                "регистрация открыта",
-                "Открытое первенство по Таэквондо",
-                "01.01.2021",
-                "01.01.2021"
-            )
-        )
-        list.add(
-            CompetitionsItem(
-                "Таэквондо",
-                "регистрация открыта",
-                "Открытое первенство по Таэквондо",
-                "01.01.2021",
-                "01.01.2021"
-            )
-        )
-        list.add(
-            CompetitionsItem(
-                "Таэквондо",
-                "регистрация открыта",
-                "Открытое первенство по Таэквондо",
-                "01.01.2021",
-                "01.01.2021"
-            )
-        )
-        list.add(
-            CompetitionsItem(
-                "Таэквондо",
-                "регистрация открыта",
-                "Открытое первенство по Таэквондо",
-                "01.01.2021",
-                "01.01.2021"
-            )
-        )
-        list.add(
-            CompetitionsItem(
-                "Таэквондо",
-                "регистрация открыта",
-                "Открытое первенство по Таэквондо",
-                "01.01.2021",
-                "01.01.2021"
-            )
-        )
-
-        return list
+    private fun initRecyclerView(view: View) {
+        view.comp_recycler.layoutManager = LinearLayoutManager(requireContext())
+        compAdapter = CompetitionsAdapter(this@CompetitionsFragment, requireContext())
+        view.comp_recycler.adapter = compAdapter
+        view.comp_recycler.setHasFixedSize(true)
     }
 
     override fun onItemClick(position: Int) {

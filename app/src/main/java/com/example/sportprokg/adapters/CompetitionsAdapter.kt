@@ -1,19 +1,33 @@
 package com.example.sportprokg.adapters
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.sportprokg.R
 import com.example.sportprokg.models.CompetitionsItem
-import com.example.sportprokg.ui.fragments.competitions.CompetitionsFragment
+import kotlinx.android.synthetic.main.competitions_item.view.*
 
 class CompetitionsAdapter(
-    private val compList: List<CompetitionsItem>,
-    private val listener: OnItemClickListener
+    private val listener: OnItemClickListener,
+    val context: Context
 ) :
     RecyclerView.Adapter<CompetitionsAdapter.CompetitionsViewHolder>() {
+
+    var compList = mutableListOf<CompetitionsItem>()
+
+    fun setData(data: MutableList<CompetitionsItem>) {
+        this.compList = data
+        notifyDataSetChanged()
+    }
+
+    fun getCompetition(position: Int): CompetitionsItem {
+        return compList[position]
+    }
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -33,20 +47,29 @@ class CompetitionsAdapter(
         holder: CompetitionsAdapter.CompetitionsViewHolder,
         position: Int
     ) {
-        holder.sport?.text = compList[position].sport
-        holder.status?.text = compList[position].status
-        holder.title?.text = compList[position].title
-        holder.startDate?.text = compList[position].startDate
-        holder.endDate?.text = compList[position].endDate
+        val currentItem = compList[position]
+
+        holder.sport?.text = "Спорт"
+        holder.status?.text = currentItem.status
+        holder.title?.text = currentItem.title
+        holder.startDate?.text = currentItem.startDate
+        holder.endDate?.text = currentItem.finishDate
+
+        Glide.with(context)
+            .load(currentItem.image)
+            .centerCrop()
+            .into(holder.image)
+
     }
 
     inner class CompetitionsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
         View.OnClickListener {
-        var sport: TextView = itemView.findViewById(R.id.comp_typeof_sport)
-        var status: TextView = itemView.findViewById(R.id.comp_status)
-        var title: TextView = itemView.findViewById(R.id.comp_title)
-        var startDate: TextView = itemView.findViewById(R.id.comp_start_date)
-        var endDate: TextView = itemView.findViewById(R.id.comp_end_date)
+        val image: ImageView = itemView.comp_image
+        var sport: TextView = itemView.comp_typeof_sport
+        var status: TextView = itemView.comp_status
+        var title: TextView = itemView.comp_title
+        var startDate: TextView = itemView.comp_start_date
+        var endDate: TextView = itemView.comp_end_date
 
         init {
             itemView.setOnClickListener(this)
