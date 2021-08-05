@@ -2,7 +2,7 @@ package com.example.sportprokg.ui.viewmodels
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.sportprokg.models.news.NewsItem
+import com.example.sportprokg.models.NewsItem
 import com.example.sportprokg.repository.NewsRepository
 import retrofit2.Call
 import retrofit2.Callback

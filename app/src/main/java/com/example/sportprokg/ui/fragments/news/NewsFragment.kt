@@ -7,12 +7,12 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.sportprokg.NewsFilterActivity
+import com.example.sportprokg.ui.Activities.NewsFilterActivity
 import com.example.sportprokg.ui.Activities.DetailedNewsActivity
 import com.example.sportprokg.R
 import com.example.sportprokg.adapters.NewsAdapter
 import com.example.sportprokg.api.ServiceAPI
-import com.example.sportprokg.models.news.NewsItem
+import com.example.sportprokg.models.NewsItem
 import com.example.sportprokg.repository.NewsRepository
 import com.example.sportprokg.ui.viewmodels.NewsViewModel
 import com.example.sportprokg.ui.viewmodels.NewsViewModelProviderFactory

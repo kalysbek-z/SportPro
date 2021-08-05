@@ -2,7 +2,7 @@ package com.example.sportprokg.api
 
 import com.example.sportprokg.Utilities.ConstValues
 import com.example.sportprokg.models.CompetitionsItem
-import com.example.sportprokg.models.news.NewsItem
+import com.example.sportprokg.models.NewsItem
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

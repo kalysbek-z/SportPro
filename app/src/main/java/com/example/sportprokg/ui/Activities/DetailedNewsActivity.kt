@@ -30,10 +30,12 @@ class DetailedNewsActivity : AppCompatActivity() {
 
         detailed_news_date.text = mDate?.substring(0, 10)
         detailed_news_content.text = mDescription
+        goBack()
+    }
 
+    private fun goBack() {
         detailed_news_back.setOnClickListener {
             onBackPressed()
         }
     }
-
 }

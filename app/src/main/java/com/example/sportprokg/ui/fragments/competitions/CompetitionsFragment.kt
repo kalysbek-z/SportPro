@@ -13,8 +13,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sportprokg.R
 import com.example.sportprokg.adapters.CompetitionsAdapter
 import com.example.sportprokg.api.ServiceAPI
+import com.example.sportprokg.models.CompetitionsItem
+import com.example.sportprokg.models.NewsItem
 import com.example.sportprokg.repository.CompetitionsRepository
 import com.example.sportprokg.ui.Activities.DetailedCompetitionsActivity
+import com.example.sportprokg.ui.fragments.competitions.detailedcompetitions.RegulationsFragment
 import com.example.sportprokg.ui.viewmodels.CompetitionsViewModel
 import com.example.sportprokg.ui.viewmodels.CompetitionsViewModelProviderFactory
 import kotlinx.android.synthetic.main.fragment_competitions.*
@@ -70,8 +73,17 @@ class CompetitionsFragment : Fragment(), CompetitionsAdapter.OnItemClickListener
     }
 
     override fun onItemClick(position: Int) {
+        val selectedEvent: CompetitionsItem = compAdapter.getCompetition(position)
+
+        var mTitle: String? = selectedEvent.title
+        var mRegulation: String? = selectedEvent.regulation
+        var mGrid: String? = selectedEvent.table
+
         val intent =
             Intent(this@CompetitionsFragment.context, DetailedCompetitionsActivity::class.java)
+        intent.putExtra("title_key", mTitle)
+        intent.putExtra("regulation_key", mRegulation)
+        intent.putExtra("grid_key", mGrid)
         startActivity(intent)
     }
 }

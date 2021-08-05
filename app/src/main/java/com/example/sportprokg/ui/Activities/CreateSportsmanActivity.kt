@@ -1,4 +1,4 @@
-    package com.example.sportprokg.ui.Activities
+package com.example.sportprokg.ui.Activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -47,35 +47,6 @@ import kotlinx.android.synthetic.main.activity_sportsman.sportsman_toolbar
         val typeOfSport: Array<String> = resources.getStringArray(R.array.categories)
         val sportName: Array<String> = resources.getStringArray(R.array.type_of_sport)
 
-//        val genderAdapter: ArrayAdapter<String> =
-//            object : ArrayAdapter<String>(this, R.layout.spinner_item2_gray, genders) {
-//                override fun getDropDownView(
-//                    position: Int,
-//                    convertView: View?,
-//                    parent: ViewGroup
-//                ): View {
-//                    val view: TextView =
-//                        super.getDropDownView(
-//                            position,
-//                            convertView,
-//                            parent
-//                        ) as TextView
-//
-//                    if (position == create_sm_gender_spinner.selectedItemPosition && position != 0) {
-//                        view.setTextColor(resources.getColor(R.color.white))
-//                    }
-//
-//                    if (position == 0) {
-//                        view.setTextColor(resources.getColor(R.color.gray))
-//                    }
-//
-//                    return view
-//                }
-//
-//                override fun isEnabled(position: Int): Boolean {
-//                    return position != 0
-//                }
-//            }
         val genderAdapter = ArrayAdapter(this,
             R.layout.spinner_item2, genders)
         create_sm_gender_spinner.adapter = genderAdapter

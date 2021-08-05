@@ -1,8 +1,9 @@
-package com.example.sportprokg
+package com.example.sportprokg.ui.Activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.widget.Toolbar
+import com.example.sportprokg.R
 
 class NewsFilterTypeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,4 +1,4 @@
-package com.example.sportprokg.models.news
+package com.example.sportprokg.models
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName

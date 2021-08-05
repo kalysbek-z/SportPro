@@ -10,5 +10,9 @@ data class CompetitionsItem(
     var startDate: String?,
     @SerializedName("finish_date")
     var finishDate: String?,
-    var status: String?
+    var status: String?,
+    @SerializedName("competitions_regulations_file")
+    var regulation: String?,
+    @SerializedName("league_table_file")
+    var table: String?
 )

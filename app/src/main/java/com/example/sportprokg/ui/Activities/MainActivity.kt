@@ -17,9 +17,5 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.fragment)
 
         bottomNavigationView.setupWithNavController(navController)
-
-//        var intent = intent
-//        var phoneNumber = intent.getStringExtra("phone")
     }
-
 }

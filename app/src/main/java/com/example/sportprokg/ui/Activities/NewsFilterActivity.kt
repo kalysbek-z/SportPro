@@ -1,9 +1,9 @@
-package com.example.sportprokg
+package com.example.sportprokg.ui.Activities
 
 import android.content.Intent
-import android.icu.text.CaseMap
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.sportprokg.R
 import kotlinx.android.synthetic.main.activity_news_filter.*
 
 class NewsFilterActivity : AppCompatActivity() {
@@ -16,7 +16,7 @@ class NewsFilterActivity : AppCompatActivity() {
 
         sportCategoriesClickListeners()
 
-        backButton()
+        goBack()
     }
 
     private fun sportCategoriesClickListeners() {
@@ -53,7 +53,7 @@ class NewsFilterActivity : AppCompatActivity() {
         }
     }
 
-    private fun backButton() {
+    private fun goBack() {
         news_filter_toolbar.setNavigationOnClickListener {
             onBackPressed()
         }

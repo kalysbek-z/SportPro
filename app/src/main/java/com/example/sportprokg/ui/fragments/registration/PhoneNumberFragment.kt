@@ -38,7 +38,6 @@ class PhoneNumberFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_phone_number, container, false)
 
         view.sign_in_btn.setOnClickListener {
-
             val bundle = Bundle()
             var phoneNumber = view.phone_number_edit_text.text.toString().trim()
             if (!phoneNumber.isEmpty() && phoneNumber.length == 19) {
@@ -53,54 +52,12 @@ class PhoneNumberFragment : Fragment() {
             } else {
                 view.incorrect_phone_num_tv.visibility = View.VISIBLE
             }
-//            var intent = activity?.intent
-//            intent?.putExtra("phone", phoneNumber)
-
-//            Navigation.findNavController(view)
-//                .navigate(R.id.action_phoneNumberFragment_to_confirmationFragment)
         }
-
         view.phone_number_toolbar.setNavigationIcon(R.drawable.ic_back)
         view.phone_number_toolbar.setNavigationOnClickListener {
             Navigation.findNavController(view)
                 .navigate(R.id.action_phoneNumberFragment_to_roleFragment)
         }
-
-//        view.sign_in_btn.setOnClickListener {
-//
-//            var phoneNumber = view.phone_number_edit_text.text.toString().trim()
-//
-//            if (!phoneNumber.isEmpty() || phoneNumber.length == 13) {
-//                PhoneAuthProvider.getInstance().verifyPhoneNumber(
-//                    view.phone_number_edit_text.getParsedText().toString(),
-//                    60,
-//                    TimeUnit.SECONDS,
-//                    requireActivity(),
-//                    phoneAuthCallbacks
-//                )
-//            }
-//        }
-
         return view
     }
-
-//    val phoneAuthCallbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-//        override fun onVerificationCompleted(p0: PhoneAuthCredential) {
-//
-//        }
-//
-//        override fun onVerificationFailed(p0: FirebaseException) {
-//
-//        }
-//
-//        override fun onCodeSent(
-//            verificationID: String,
-//            token: PhoneAuthProvider.ForceResendingToken
-//        ) {
-//            super.onCodeSent(verificationID, token)
-//
-//            this@PhoneNumberFragment.verificationID = verificationID
-//        }
-//    }
-
 }
