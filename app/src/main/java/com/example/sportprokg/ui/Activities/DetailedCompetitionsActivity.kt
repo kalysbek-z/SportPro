@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.provider.ContactsContract
 import android.util.Log
 import androidx.viewpager2.widget.ViewPager2
+import com.example.sportprokg.DataCommunicator
 import com.example.sportprokg.R
 import com.example.sportprokg.adapters.DetailedCompetitionsViewPagerAdapter
 import com.example.sportprokg.ui.fragments.competitions.detailedcompetitions.GridsFragment
@@ -72,11 +73,6 @@ class DetailedCompetitionsActivity : AppCompatActivity() {
         dataCommunicatorGrids = gridsFragment as DataCommunicator
         if (mGrid != null) {
             dataCommunicatorGrids?.sendData(mGrid)
-        }
-    }
-
-    public interface DataCommunicator {
-        fun sendData(data: String) {
         }
     }
 

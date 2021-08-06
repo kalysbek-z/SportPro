@@ -72,6 +72,16 @@
         android:layout_marginBottom="8dp"
         android:background="@color/white" />
 
+    <ImageView
+        android:id="@+id/comp_filter_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appBarLayoutComp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:paddingTop="10dp"
+        android:src="@drawable/ic_filter_vector" />
+
     <ProgressBar
         android:id="@+id/comp_progressbar"
         android:layout_width="wrap_content"

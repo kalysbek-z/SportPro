@@ -14,5 +14,7 @@ data class CompetitionsItem(
     @SerializedName("competitions_regulations_file")
     var regulation: String?,
     @SerializedName("league_table_file")
-    var table: String?
+    var table: String?,
+    @SerializedName("sport")
+    var sportType: Sport?
 )

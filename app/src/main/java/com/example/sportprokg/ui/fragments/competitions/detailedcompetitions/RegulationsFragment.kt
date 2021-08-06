@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.sportprokg.DataCommunicator
 import com.example.sportprokg.R
 import com.example.sportprokg.ui.Activities.DetailedCompetitionsActivity
 import com.github.barteksc.pdfviewer.PDFView
@@ -18,7 +19,8 @@ import java.net.URL
 
 var pdfViewRegulation: PDFView? = null
 
-class RegulationsFragment : Fragment(), DetailedCompetitionsActivity.DataCommunicator {
+class RegulationsFragment : Fragment(),
+    DataCommunicator {
 
     private var regulation: String? = null
 

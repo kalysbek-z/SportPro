@@ -49,7 +49,7 @@ class CompetitionsAdapter(
     ) {
         val currentItem = compList[position]
 
-        holder.sport?.text = "Спорт"
+        holder.sport?.text = currentItem.sportType?.sport
         holder.status?.text = currentItem.status
         holder.title?.text = currentItem.title
         holder.startDate?.text = currentItem.startDate
@@ -59,7 +59,6 @@ class CompetitionsAdapter(
             .load(currentItem.image)
             .centerCrop()
             .into(holder.image)
-
     }
 
     inner class CompetitionsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),

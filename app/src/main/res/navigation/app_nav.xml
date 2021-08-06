@@ -9,8 +9,7 @@
         android:id="@+id/newsFragment"
         android:name="com.example.sportprokg.ui.fragments.news.NewsFragment"
         android:label="Новости"
-        tools:layout="@layout/fragment_news"
-        app:defaultNavHost="true"/>
+        tools:layout="@layout/fragment_news" />
     <fragment
         android:id="@+id/competitionsFragment"
         android:name="com.example.sportprokg.ui.fragments.competitions.CompetitionsFragment"
@@ -20,7 +19,7 @@
         android:id="@+id/roleFragment"
         android:name="com.example.sportprokg.ui.fragments.registration.RoleFragment"
         android:label="Профиль"
-        tools:layout="@layout/fragment_role" >
+        tools:layout="@layout/fragment_role">
         <action
             android:id="@+id/action_roleFragment_to_phoneNumberFragment"
             app:destination="@id/phoneNumberFragment" />
@@ -29,7 +28,7 @@
         android:id="@+id/phoneNumberFragment"
         android:name="com.example.sportprokg.ui.fragments.registration.PhoneNumberFragment"
         android:label="fragment_phone_number"
-        tools:layout="@layout/fragment_phone_number" >
+        tools:layout="@layout/fragment_phone_number">
         <action
             android:id="@+id/action_phoneNumberFragment_to_confirmationFragment"
             app:destination="@id/confirmationFragment" />
@@ -41,7 +40,7 @@
     <fragment
         android:id="@+id/confirmationFragment"
         android:name="com.example.sportprokg.ui.fragments.registration.ConfirmationFragment"
-        android:label="ConfirmationFragment" >
+        android:label="ConfirmationFragment">
         <action
             android:id="@+id/action_confirmationFragment_to_registrationFragment"
             app:destination="@id/registrationFragment" />
@@ -57,7 +56,7 @@
         android:id="@+id/registrationFragment"
         android:name="com.example.sportprokg.ui.fragments.registration.RegistrationFragment"
         android:label="fragment_registration"
-        tools:layout="@layout/fragment_registration" >
+        tools:layout="@layout/fragment_registration">
         <action
             android:id="@+id/action_registrationFragment_to_requestSentFragment"
             app:destination="@id/requestSentFragment" />
@@ -70,7 +69,7 @@
         android:id="@+id/requestSentFragment"
         android:name="com.example.sportprokg.ui.fragments.registration.RequestSentFragment"
         android:label="fragment_request_sent"
-        tools:layout="@layout/fragment_request_sent" >
+        tools:layout="@layout/fragment_request_sent">
         <action
             android:id="@+id/action_requestSentFragment_to_registrationFragment"
             app:destination="@id/registrationFragment"

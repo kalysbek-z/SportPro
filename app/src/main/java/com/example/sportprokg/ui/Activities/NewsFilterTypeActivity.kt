@@ -6,6 +6,8 @@ import androidx.appcompat.widget.Toolbar
 import com.example.sportprokg.R
 
 class NewsFilterTypeActivity : AppCompatActivity() {
+    lateinit var title: String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_news_filter_type)
@@ -14,7 +16,7 @@ class NewsFilterTypeActivity : AppCompatActivity() {
 
     private fun setToolbarTitle() {
         var intent = intent
-        var title = intent.getStringExtra("title")
+        title = intent.getStringExtra("title").toString()
 
         val toolbar = findViewById<Toolbar>(R.id.news_filter_type_toolbar)
         toolbar.setTitle(title)

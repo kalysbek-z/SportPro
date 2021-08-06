@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".ui.Activities.NewsFilterActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/comp_filter_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@drawable/ic_back"
+        app:title="Фильтровать"
+        app:titleTextAppearance="@style/ToolBarAppearance"
+        app:titleTextColor="@color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="@font/oswald"
+        android:text="Виды Спорта"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textFontWeight="700"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/comp_national_sports_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/rounded_filter_img_view"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:foreground="@drawable/image_shadow"
+                android:scaleType="centerCrop"
+                android:src="@drawable/national_sports" />
+
+            <TextView
+                android:id="@+id/comp_national_sports_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/oswald"
+                android:maxWidth="90dp"
+                android:text="Национальныe виды спорта"
+                android:textColor="@color/white"
+                android:textFontWeight="700"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="135dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="90dp"
+                android:background="@color/white" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/comp_olympic_sports_btn"
+            android:layout_width="156dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/rounded_filter_img_view"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="156dp"
+                android:layout_height="100dp"
+                android:foreground="@drawable/image_shadow"
+                android:scaleType="centerCrop"
+                android:src="@drawable/olympic_sports" />
+
+            <TextView
+                android:id="@+id/comp_olympic_sports_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/oswald"
+                android:maxWidth="90dp"
+                android:text="Олимпийские виды спорта"
+                android:textColor="@color/white"
+                android:textFontWeight="700"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="135dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="90dp"
+                android:background="@color/white" />
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/comp_not_olympic_sports_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/rounded_filter_img_view"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:foreground="@drawable/image_shadow"
+                android:scaleType="centerCrop"
+                android:src="@drawable/not_olympic_sports" />
+
+            <TextView
+                android:id="@+id/comp_not_olympic_sports_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/oswald"
+                android:maxWidth="90dp"
+                android:text="Неолипийские виды спорта"
+                android:textColor="@color/white"
+                android:textFontWeight="700"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="135dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="90dp"
+                android:background="@color/white" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/comp_para_surdo_sports_btn"
+            android:layout_width="156dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/rounded_filter_img_view"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="156dp"
+                android:layout_height="100dp"
+                android:foreground="@drawable/image_shadow"
+                android:scaleType="centerCrop"
+                android:src="@drawable/para_surdo_sports" />
+
+            <TextView
+                android:id="@+id/comp_para_surdo_sports_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/oswald"
+                android:maxWidth="110dp"
+                android:text="Виды спортов Пара и Сурдо (ЛОВЗ)"
+                android:textColor="@color/white"
+                android:textFontWeight="700"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="135dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="90dp"
+                android:background="@color/white" />
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</LinearLayout>
