@@ -58,7 +58,8 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="40dp"
                 android:fontFamily="@font/oswald"
-                android:text="Национальныe\n виды спорта"
+                android:maxWidth="90dp"
+                android:text="Национальныe виды спорта"
                 android:textColor="@color/white"
                 android:textFontWeight="700"
                 android:textSize="14sp" />
@@ -95,7 +96,8 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="40dp"
                 android:fontFamily="@font/oswald"
-                android:text="Олимпийские\n виды спорта"
+                android:maxWidth="90dp"
+                android:text="Олимпийские виды спорта"
                 android:textColor="@color/white"
                 android:textFontWeight="700"
                 android:textSize="14sp" />
@@ -140,7 +142,8 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="40dp"
                 android:fontFamily="@font/oswald"
-                android:text="Неолипийские\n виды спорта"
+                android:maxWidth="90dp"
+                android:text="Неолипийские виды спорта"
                 android:textColor="@color/white"
                 android:textFontWeight="700"
                 android:textSize="14sp" />
@@ -177,6 +180,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="40dp"
                 android:fontFamily="@font/oswald"
+                android:maxWidth="110dp"
                 android:text="Виды спортов Пара и Сурдо (ЛОВЗ)"
                 android:textColor="@color/white"
                 android:textFontWeight="700"

@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         setTheme(R.style.Theme_SportProKG)
         setContentView(R.layout.activity_main)
 
-        Log.d("tag","Main activity created")
+        Log.d("tag", "Main activity created")
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         val navController = findNavController(R.id.fragment)
@@ -28,6 +28,8 @@ class MainActivity : AppCompatActivity() {
         when (activityKey) {
             ConstValues.COMPETITION_KEY ->
                 bottomNavigationView.selectedItemId = R.id.competitionsFragment
+            ConstValues.NEWS_KEY ->
+                bottomNavigationView.selectedItemId = R.id.newsFragment
         }
     }
 }

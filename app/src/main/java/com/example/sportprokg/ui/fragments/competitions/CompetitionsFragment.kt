@@ -19,7 +19,6 @@ import com.example.sportprokg.api.ServiceAPI
 import com.example.sportprokg.models.CompetitionsItem
 import com.example.sportprokg.repository.CompetitionsRepository
 import com.example.sportprokg.ui.Activities.DetailedCompetitionsActivity
-import com.example.sportprokg.ui.Activities.NewsFilterActivity
 import com.example.sportprokg.ui.viewmodels.CompetitionsViewModel
 import com.example.sportprokg.ui.viewmodels.CompetitionsViewModelProviderFactory
 import kotlinx.android.synthetic.main.fragment_competitions.*

@@ -11,6 +11,8 @@ import androidx.navigation.Navigation
 import com.example.sportprokg.R
 import kotlinx.android.synthetic.main.fragment_role.view.*
 
+var role = 0
+
 class RoleFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,12 +28,15 @@ class RoleFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_role, container, false)
 
         view.coach_btn.setOnClickListener {
-//            Log.d("btn", "clicked")
-            Navigation.findNavController(view).navigate(R.id.action_roleFragment_to_phoneNumberFragment)
+            role = 1
+            Navigation.findNavController(view)
+                .navigate(R.id.action_roleFragment_to_phoneNumberFragment)
         }
 
         view.judge_btn.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_roleFragment_to_phoneNumberFragment)
+            role = 2
+            Navigation.findNavController(view)
+                .navigate(R.id.action_roleFragment_to_phoneNumberFragment)
         }
 
         return view

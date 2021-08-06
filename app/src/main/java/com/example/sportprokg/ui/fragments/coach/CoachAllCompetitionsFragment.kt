@@ -5,29 +5,28 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sportprokg.R
+import com.example.sportprokg.adapters.CompetitionsAdapter
+import com.example.sportprokg.api.ServiceAPI
+import com.example.sportprokg.repository.CompetitionsRepository
+import com.example.sportprokg.ui.viewmodels.CompetitionsViewModel
+import com.example.sportprokg.ui.viewmodels.CompetitionsViewModelProviderFactory
+import kotlinx.android.synthetic.main.fragment_coach_all_competitions.view.*
+import kotlinx.android.synthetic.main.fragment_competitions.view.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [CoachAllCompetitionsFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class CoachAllCompetitionsFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+
+    lateinit var compAdapter: CompetitionsAdapter
+    lateinit var viewModel: CompetitionsViewModel
+
+    private val retrofitService = ServiceAPI.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+
     }
 
     override fun onCreateView(
@@ -35,27 +34,32 @@ class CoachAllCompetitionsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_coach_all_competitions, container, false)
+        val view = inflater.inflate(R.layout.fragment_coach_all_competitions, container, false)
+
+        viewModel = ViewModelProvider(
+            this,
+            CompetitionsViewModelProviderFactory(CompetitionsRepository(retrofitService))
+        ).get(CompetitionsViewModel::class.java)
+
+        initRecyclerView(view)
+
+        viewModel.competitionsList.observe(viewLifecycleOwner, Observer {
+            compAdapter.setData(it)
+        })
+
+        viewModel.errorMessage.observe(viewLifecycleOwner, Observer {
+            //???
+        })
+
+        viewModel.getAllCompetitions()
+
+        return view
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment CoachAllCompetitionsFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            CoachAllCompetitionsFragment()
-                .apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    private fun initRecyclerView(view: View) {
+        view.coach_all_comp_recycler.layoutManager = LinearLayoutManager(requireContext())
+        compAdapter = CompetitionsAdapter(requireContext())
+        view.coach_all_comp_recycler.adapter = compAdapter
+        view.coach_all_comp_recycler.setHasFixedSize(true)
     }
 }

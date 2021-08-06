@@ -10,13 +10,23 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.sportprokg.R
 import com.example.sportprokg.models.CompetitionsItem
+import com.example.sportprokg.ui.fragments.coach.CoachAllCompetitionsFragment
+import com.example.sportprokg.ui.fragments.competitions.CompetitionsFragment
 import kotlinx.android.synthetic.main.competitions_item.view.*
 
 class CompetitionsAdapter(
-    private val listener: OnItemClickListener,
     val context: Context
 ) :
     RecyclerView.Adapter<CompetitionsAdapter.CompetitionsViewHolder>() {
+
+    private var itemListener = CompetitionsFragment()
+
+    constructor(
+        listener: CompetitionsFragment,
+        context: Context
+    ) : this(context) {
+        itemListener = listener
+    }
 
     var compList = mutableListOf<CompetitionsItem>()
 
@@ -77,7 +87,7 @@ class CompetitionsAdapter(
         override fun onClick(v: View?) {
             val position = adapterPosition
             if (position != RecyclerView.NO_POSITION) {
-                listener.onItemClick(position)
+                itemListener.onItemClick(position)
             }
         }
     }

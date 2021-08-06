@@ -8,6 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import com.example.sportprokg.R
+import com.example.sportprokg.ui.fragments.coach.CoachCompetitionsFragment
+import com.example.sportprokg.ui.fragments.coach.CoachMainFragment
+import com.example.sportprokg.ui.fragments.referee.RefereeFragment
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential
@@ -142,15 +145,18 @@ class ConfirmationFragment : Fragment() {
     private fun signInWithPhoneAuthCredential(credential: PhoneAuthCredential) {
         firebaseAuth.signInWithCredential(credential)
             .addOnCompleteListener {
-//                val phone = firebaseAuth.currentUser?.phoneNumber
-//
-//                Navigation.findNavController(requireView())
-//                    .navigate(R.id.action_confirmationFragment_to_registrationFragment)
                 if (it.isSuccessful) {
-                    val requestSentFragment = RequestSentFragment()
-                    val transaction = fragmentManager?.beginTransaction()
-                        ?.replace(R.id.fragment, requestSentFragment)
-                        ?.commit()
+                    val coachFragment = CoachMainFragment()
+                    val refereeFragment = RefereeFragment()
+                    if (role == 1) {
+                        val transaction = fragmentManager?.beginTransaction()
+                            ?.replace(R.id.fragment, coachFragment)
+                            ?.commit()
+                    } else if (role == 2) {
+                        val transaction = fragmentManager?.beginTransaction()
+                            ?.replace(R.id.fragment, refereeFragment)
+                            ?.commit()
+                    }
 
                     progressDialog.dismiss()
                 } else {
