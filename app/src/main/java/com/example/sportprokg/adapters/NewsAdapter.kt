@@ -65,6 +65,7 @@ class NewsAdapter(
 
     fun setData(data: MutableList<NewsItem>) {
         this.newsList = data
+        newsList.reverse()
         notifyDataSetChanged()
     }
 

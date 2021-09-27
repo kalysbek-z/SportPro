@@ -23,6 +23,9 @@
         <action
             android:id="@+id/action_roleFragment_to_phoneNumberFragment"
             app:destination="@id/phoneNumberFragment" />
+        <action
+            android:id="@+id/action_roleFragment_to_refreeFragment"
+            app:destination="@id/refreeFragment" />
     </fragment>
     <fragment
         android:id="@+id/phoneNumberFragment"

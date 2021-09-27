@@ -32,6 +32,7 @@ class CompetitionsAdapter(
 
     fun setData(data: MutableList<CompetitionsItem>) {
         this.compList = data
+        compList.reverse()
         notifyDataSetChanged()
     }
 
